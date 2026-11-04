@@ -81,3 +81,8 @@ INSOMNIA [3], STRAL [4], Žliobaitė 2014 [30], Cacciarelli 2024, Settles 2010: 
 - Nội dung 5: NCS ghi đã đính kèm `outline_v14_3_noidung5.txt` nhưng tệp **không hiện trong thư mục tải lên** → vẫn SOURCE MISSING.
 - Tải thêm qua web (PDF, đọc bằng pdftotext trong phiên): Settles 2010 (https://burrsettles.com/pub/settles.activelearning.pdf, §3.4 đọc đầy đủ), Tab-AICL (https://arxiv.org/pdf/2603.27385), Cacciarelli & Kulahci (https://arxiv.org/pdf/2302.08893, chỉ các đoạn liên quan), STRAL (https://arxiv.org/pdf/2605.22324, bản v2; mục 5.3 và bảng so sánh). NetGuard PDF (https://arxiv.org/pdf/2503.03022) đã tải nhưng **chưa đọc** — để G3.
 - Chưa mở được: Springer (redirect đăng nhập) cho Cacciarelli; Botacin & Gomes (403/429); Roy & McCallum chỉ trang abstract.
+
+### 5.3 Cập nhật G3 (04/11/2026)
+- Đã nhận và đọc toàn bộ: `outline_v14_3_noidung5.txt` (Nội dung 5, 6) và `THESIS_AUDIT_LOG_RQ3_RQ4.md` (v1, 04/11/2026; lưu trong `sources/`). **Nội dung 5 không còn SOURCE MISSING.**
+- Mở thêm: INSOMNIA full text (https://s2lab.cs.ucl.ac.uk/downloads/insomnia.pdf); Castellani 2022 (https://arxiv.org/pdf/2204.06822); NetGuard PDF (https://arxiv.org/pdf/2503.03022); MOA ALUncertainty javadoc; modAL EER doc; Sharchilev 2018 abstract. Chi tiết mức đọc: `RQ3_REFS.bib` (`x-opened`, `x-depth`).
+- Không mở được: Springer Pham et al. 2022 (429); Kassel repository (Anubis); `roy` PDF tại cs.cmu.edu (404); Botacin & Gomes (403/429/không có arXiv).

@@ -1,0 +1,12 @@
+Nội dung 5 – Đánh giá kết hợp
+
+Ba cơ chế chạy chung theo thứ tự lọc → chọn → nạp, trên cả TFM và LightGBM, với ablation bỏ từng cơ chế. Phép so này là nơi kiểm chứng H1a, H1b (RQ1) và tương tác giữa các RQ (ví dụ: bỏ bộ lọc thì ngăn mẫu khó và chọn mẫu theo độ bất định có làm tăng tỷ lệ nhãn độc trong ngữ cảnh không). Chi phí GPU-giây và bộ nhớ đỉnh của mỗi cấu hình được báo cáo; các phương án triển khai biên–cloud chỉ được thảo luận dựa trên các số đo này. Với H1b, mỗi cấu hình được đặt trên mặt phẳng AUPRC – chi phí quy đổi; biên Pareto được tính riêng cho từng mức b, kèm khoảng tin cậy bootstrap của AUPRC và phân tích độ nhạy theo đơn giá GPU.
+
+Nội dung 6 – Nguyên tắc đánh giá, tái lập và đạo đức
+
+-   TabFM là mô hình chính, checkpoint cố định; H1–H4 được kiểm định trên TabFM. TabPFN-2.5 là kiểm tra độ vững: chỉ chạy các phép so chính (đề xuất so với đối chứng mạnh nhất của mỗi RQ) trên một bộ phát triển với 3 seed, và được báo cáo là nhất quán nếu chênh lệch cùng dấu và khoảng tin cậy 95% chồng lên khoảng của TabFM.
+
+-   Dữ liệu phát triển tách khỏi dữ liệu xác nhận; dữ liệu xác nhận chỉ mở sau khi phương pháp, siêu tham số và các biên ε đã đăng ký trước. CIC-IDS2017 không dùng làm xác nhận độc lập vì cùng nhóm sinh dữ liệu với CSE-CIC-IDS2018; bản đã sửa nhãn [6] chỉ dùng để kiểm tra tác động của chất lượng nhãn.
+
+-   Suy luận theo cấu trúc phân cấp (ngày gốc → tình huống) như ở Nội dung 1, hiệu chỉnh Holm trong mỗi họ phép so chính; báo cáo cả kết quả âm.
+
