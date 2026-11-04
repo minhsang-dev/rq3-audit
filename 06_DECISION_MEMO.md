@@ -1,6 +1,6 @@
 # 06 — DECISION MEMO (G5) — RQ3 / H3
 
-- **STATUS:** G5 DRAFT, chờ NCS duyệt. Kiểm toán trên giấy; **chưa có thực nghiệm nào**. **H3 = NO CONCLUSION.**
+- **STATUS:** G5 **APPROVED** (NCS, 04/11/2026) — **kiểm toán RQ3 trên giấy G0–G5 khép lại.** Chưa có thực nghiệm nào. **H3 = NO CONCLUSION.**
 - **SOURCE ANCHORS:** `03_ASSUMPTIONS_AND_COST.md` (A1–A6); `04_BASELINE_AND_NOVELTY.md`; `05_FUTURE_PROBES.md`; `sources/outline_v14_3_RQ3_RQ4_verbatim.txt` (H3 L10, ε₃ L53, Nội dung 1 L51); `sources/RQ2_DECISION_LOG.md` §3, §8–9 (số root); `sources/THESIS_AUDIT_LOG_RQ3_RQ4.md` §5.
 - **ASSUMPTIONS:** Số TabFM là ngoại suy từ pilot Bài 1. Đề cương v14.3 đã nộp, **không sửa** trong ~6 tháng; mọi phương án sửa dưới đây là **ĐỀ XUẤT SỬA (CHƯA DUYỆT)**, chỉ để chuẩn bị.
 - **OPEN QUESTIONS:** mục 5.
@@ -59,3 +59,10 @@ Khuyến nghị (nêu ý kiến, NCS quyết): chốt trong tiền đăng ký **
 5. Đo GPU TabFM thật chung P4d (RQ4) để quyết định trần/EER hai tầng.
 
 Đã chốt: Q23 (lịch sử nhãn trước luồng, làm nóng τ + 2 ngày), Q24 (cùng trần, báo chi phí từng nhánh), Q25 (log-loss 1/π; 0-1 độ nhạy; N_c = 10·b′; U_c), Q26 (root "đủ thông tin" chỉ từ nhánh ngẫu nhiên, chốt trước khi xem EER, báo cáo root bị loại). **Còn mở:** (i) chọn (a) hay (b) cho tiền đăng ký; (ii) phần cứng CPU/số lõi cho P3b; (iii) định nghĩa phơi nhiễm gốc của [2] chưa đối chiếu được (chưa mở bài); (iv) tìm kiếm extended + đọc Pham 2022, Žliobaitė 2014 trước khi viết đóng góp.
+
+## 6. Quyết định của NCS khi duyệt G5 (04/11/2026)
+1. **Tiền đăng ký: chọn phương án (a)** — họ kiểm định chính gồm **tối đa 3 ô**; các ô còn lại chỉ mô tả.
+2. **Chọn ô chính sau P3a, trước khi chạm root xác nhận.** P3a chạy trên root DEV (root DEV của RQ2/Bài 1 dùng lại, DEV_REUSE); kết quả DEV được dùng để chọn ô chính. Hợp lệ miễn là root xác nhận chưa từng được dùng cho bất kỳ lựa chọn nào của RQ3.
+3. **Root DEV và root xác nhận tách rời.** P3a **không** dùng các root CIDDS dự định cho xác nhận. CIDDS đã dùng cho RQ2 không làm mất hiệu lực với RQ3 (câu hỏi khác; thiết kế RQ3 không tinh chỉnh trên các root đó), nhưng vẫn là **một môi trường**, nên phát biểu kết luận phải ghi rõ phạm vi này.
+4. **Danh sách sửa đề cương (CHƯA DUYỆT):** ghi S1, S2, S3, S5. **Không nới ε₃.** (S4 và S6 trong mục 3 chưa được ghi vào danh sách; giữ ở trạng thái phương án.)
+5. **Phần cứng cho P3b:** NCS điền thông tin khi chạy (hiện **[CXM]**).
