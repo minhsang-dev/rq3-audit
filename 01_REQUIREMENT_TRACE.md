@@ -19,7 +19,7 @@
 ### A3. Công thức (2-6) (L56–60)
 > Điểm chọn mẫu là giảm lỗi kỳ vọng [31] tính trên ngữ cảnh:
 >
-> g(x) = E_(y ∼ p̂(⋅∣x))[ℒ_(V)(C)−ℒ_(V)(C∪{(x,y)})] (2-6)
+> g(x) = E_(y ∼ p̂(⋅∣x))[ℒ_(V)(C)−ℒ_(V)(C∪{(x,y)})] (2-6)
 >
 > trong đó tập kiểm V_(t) gồm các dòng có nhãn chuyên viên, từ nguồn không bị gắn cờ, thuộc phần nhãn dành riêng η·b (mục 2.1), rời khỏi C_(t) và Dcal, trong cửa sổ W_(V) ngày gần nhất; độ cũ của V_(t) được báo cáo.
 
@@ -28,7 +28,7 @@
 >
 > Điểm chọn mẫu là giảm lỗi kỳ vọng [31] tính trên ngữ cảnh:
 >
-> g(x) = E_(y ∼ p̂(⋅∣x))[ℒ_(V)(C)−ℒ_(V)(C∪{(x,y)})] (2-6)
+> g(x) = E_(y ∼ p̂(⋅∣x))[ℒ_(V)(C)−ℒ_(V)(C∪{(x,y)})] (2-6)
 >
 > trong đó tập kiểm V_(t) gồm các dòng có nhãn chuyên viên, từ nguồn không bị gắn cờ, thuộc phần nhãn dành riêng η·b (mục 2.1), rời khỏi C_(t) và Dcal, trong cửa sổ W_(V) ngày gần nhất; độ cũ của V_(t) được báo cáo.
 >
