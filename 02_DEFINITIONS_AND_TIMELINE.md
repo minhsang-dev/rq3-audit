@@ -1,6 +1,6 @@
 # 02 — DEFINITIONS AND TIMELINE (G1)
 
-- **STATUS:** G1 DRAFT — chờ NCS trả lời các câu hỏi Q1–Q14. Không có điểm nào được tự quyết. G2–G5 chưa làm.
+- **STATUS:** G1 — NCS đã trả lời Q1–Q14 (04/11/2026, mục 7). Các PROPOSAL sẽ được cố định trong prereg, không phải sửa đề cương. Câu hỏi mới: Q15–Q18 trong `03_ASSUMPTIONS_AND_COST.md`.
 - **SOURCE ANCHORS:** `sources/outline_v14_3_RQ3_RQ4_verbatim.txt` (H3 L10; Định nghĩa 4 L27; Định nghĩa 6 L31–35; ngân sách η·b L37; Nội dung 3 L54–64; (2-6) L58; V_t L60; thứ tự lọc→chọn→nạp L20; (2-2) L21–23); `sources/bai1_manuscript_v4_2_clean.md` §3.1, §3.2, §3.4, §3.6, §4.3, §4.5, Bảng 2 (hash khác bản NCS nêu, xem `00_SOURCE_MANIFEST.md` §5); `sources/RQ2_DECISION_LOG.md` §8–9 (HB2); `sources/outline_v14_3_references.txt`.
 - **ASSUMPTIONS:** (a) Giao thức Bài 1 (§3.1) là *triển khai tham chiếu* của "score first, learn after", không phải điều khoản của đề cương; dùng làm khung lập timeline, mỗi chỗ lệch với đề cương được nêu. (b) Chưa đọc nội dung [2], [3], [30], [31] → mọi nhận định về "các công trình đó định nghĩa gì" là **CHƯA XÁC MINH**. (c) Không dùng kết quả Bài 1 làm bằng chứng cho RQ3 (theo chỉ thị NCS).
 - **OPEN QUESTIONS:** Q1–Q14 (mục 6).
@@ -136,3 +136,25 @@ Ghép với đề cương [ĐC: (2-2): C_t = π(C_{t−1}, N_t, U_t), N_t = "dò
 | Q14 | Độ cũ của V_t: định nghĩa (trung bình/tối đa) và có ngưỡng loại trừ không? | — |
 
 Ngoài ra, nhắc lại một lệch nguồn (không thuộc G1 nhưng chặn mọi trích Bài 1): hash của bản thảo Bài 1 NCS nêu (`438d5b44…989c7`) ≠ hash tệp đính kèm (`e25f39ee…`).
+
+---
+
+## 7. Quyết định của NCS (ghi nhận nguyên trạng; PROPOSAL = diễn giải cố định trong prereg, không sửa đề cương)
+
+| # | Quyết định |
+|---|---|
+| Q1 | Chính: **E3** (cấp luồng chuẩn hóa: luồng tấn công-ngày chưa phát hiện / số luồng tấn công đã xuất hiện, trọng số IPW). Phụ: E1. Khi mở [2] ở G3, căn theo định nghĩa gốc nếu khác và ghi thay đổi. PROPOSAL |
+| Q2 | Đơn vị: ngày (lưới replay) |
+| Q3 | Mỗi đợt xuất hiện: lần đầu và mỗi lần tái xuất hiện sau ≥ 3 ngày vắng (đồng hồ reset). PROPOSAL |
+| Q4 | Phát hiện cấp luồng: hàng tấn công EVAL được phát hiện nếu điểm ≥ λ_t (Định nghĩa 6) trong ngày đánh giá. Không bao giờ phát hiện: chặn ở cuối cửa sổ; báo cáo số và tỷ lệ luồng/họ bị kiểm duyệt |
+| Q5 | F1-macro trên 2 lớp tại λ_t (quy tắc D_cal); chỉ số theo họ báo riêng |
+| Q6 | Nhị phân: entropy, margin, least-confidence xếp hạng như nhau → dùng margin. Mô hình chấm = mô hình của chính nhánh (TabFM / LightGBM), như EER. Bất định chấm bằng LightGBM cho nhánh TabFM (quy ước CURE Bài 1) chỉ làm độ nhạy |
+| Q7 | Đọc ở mức tập dữ liệu (chức năng). Tệp Nội dung 5 được nói là đính kèm nhưng **không có trong phiên** (xem `03_…` đầu tệp) |
+| Q8 | Không: nhãn đến cuối ngày t dùng từ ngày t+1, cho cả chấm điểm lẫn chọn |
+| Q9 | Không có bộ lọc: V_t = nhãn dành riêng của mọi nguồn, kể cả bị chiếm |
+| Q10 | η·b chia 50/50 ngẫu nhiên (có seed) cho V_t và D_cal, rời nhau; W_V = 3 ngày. PROPOSAL. Thêm giả định A6 ở G2 |
+| Q11 | Scenario replay (Q13): hàng dành riêng lấy từ phần CAL, phân tầng theo điểm của mô hình nhánh tại thời điểm truy vấn, lấy dư tầng cao, trọng số 1/π; chiến lược chọn chỉ lấy từ phần POLICY |
+| Q12 | Nhãn giả: chỉ BASE (CBRS-family), không vào H; ≤ 10% k; thay khi có nhãn thật; không dùng cho hàng dự đoán benign trong vùng trôi dạt |
+| Q13 | Scenario replay (EVAL/POLICY/CAL tách vai) |
+| Q14 | Độ cũ = trung bình và tối đa tuổi (ngày) của V_t tại thời điểm chọn; chỉ báo cáo, không ngưỡng loại trừ |
+| Hash | `e25f39ee…` là bản sao "clean" (đã bỏ chú thích HTML) của v4.2 (`438d5b44…`); ghi cả hai, trích dùng bản nào cũng được |

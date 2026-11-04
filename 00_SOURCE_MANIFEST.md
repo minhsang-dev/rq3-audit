@@ -61,7 +61,7 @@ Có (nguyên văn): RQ2/H2 (dòng 2–4); RQ3, H3 (8–10); RQ4, H4a, H4b (14–
 
 **Trả lời của NCS:** (1) đã đính kèm `outline_v14_3_references.txt`; (2) cho phép web — phải ghi URL đã mở và mức đọc, đánh [VERIFY] chỗ không mở được, không trích bài chưa mở; (3) bản thảo Bài 1 được dùng làm nguồn cho giao thức phát lại (L5, b, η, k, EVAL/POLICY/CAL) và chi phí TabFM đã đo; mọi ngoại suy phải ghi nhãn; **không** dùng kết quả Bài 1 (H1a, PC1, bảng AUPRC) làm bằng chứng cho giả định RQ3; (4) G0 duyệt, sang G1.
 
-**Điểm lệch cần NCS biết (không tự giải quyết):** NCS nêu dùng `bai1_manuscript_v4_2.md` (SHA-256 `438d5b44…989c7`). Tệp được đính kèm là `bai1_manuscript_v4_2_clean.md`, sha256 `e25f39ee8cd3…` (hai lần đính kèm giống hệt nhau). **Hash không khớp** → tôi dùng tệp "clean" với nhãn *chưa xác nhận là cùng bản* và trích theo mục (§3.1, §3.6, §4.3, §4.5, Bảng 2), không dựa vào số dòng. Nếu NCS xác nhận "clean" là bản dẫn xuất hợp lệ thì gỡ nhãn này.
+**Điểm lệch cần NCS biết (không tự giải quyết):** NCS nêu dùng `bai1_manuscript_v4_2.md` (SHA-256 `438d5b44…989c7`). Tệp được đính kèm là `bai1_manuscript_v4_2_clean.md`, sha256 `e25f39ee8cd3…` (hai lần đính kèm giống hệt nhau). **Hash không khớp (đã được NCS giải thích 04/11/2026: `e25f39ee…` là bản "clean" bỏ chú thích HTML của v4.2 `438d5b44…`; ghi cả hai)** → tôi dùng tệp "clean" với nhãn *chưa xác nhận là cùng bản* và trích theo mục (§3.1, §3.6, §4.3, §4.5, Bảng 2), không dựa vào số dòng. Nếu NCS xác nhận "clean" là bản dẫn xuất hợp lệ thì gỡ nhãn này.
 
 ### 5.1 Nhật ký web (các trang đã thử mở trong phiên)
 
@@ -76,3 +76,8 @@ Có (nguyên văn): RQ2/H2 (dòng 2–4); RQ3, H3 (8–10); RQ4, H4a, H4b (14–
 | https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.cose.2024.104122 | 429 | KHÔNG MỞ ĐƯỢC |
 
 INSOMNIA [3], STRAL [4], Žliobaitė 2014 [30], Cacciarelli 2024, Settles 2010: **chưa thử mở** trong G1 (sẽ làm ở G3). Chưa trích gì từ chúng.
+
+### 5.2 Cập nhật G2 (04/11/2026)
+- Nội dung 5: NCS ghi đã đính kèm `outline_v14_3_noidung5.txt` nhưng tệp **không hiện trong thư mục tải lên** → vẫn SOURCE MISSING.
+- Tải thêm qua web (PDF, đọc bằng pdftotext trong phiên): Settles 2010 (https://burrsettles.com/pub/settles.activelearning.pdf, §3.4 đọc đầy đủ), Tab-AICL (https://arxiv.org/pdf/2603.27385), Cacciarelli & Kulahci (https://arxiv.org/pdf/2302.08893, chỉ các đoạn liên quan), STRAL (https://arxiv.org/pdf/2605.22324, bản v2; mục 5.3 và bảng so sánh). NetGuard PDF (https://arxiv.org/pdf/2503.03022) đã tải nhưng **chưa đọc** — để G3.
+- Chưa mở được: Springer (redirect đăng nhập) cho Cacciarelli; Botacin & Gomes (403/429); Roy & McCallum chỉ trang abstract.
