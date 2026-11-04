@@ -1,6 +1,6 @@
 # 04 — BASELINES AND NOVELTY (G3)
 
-- **STATUS:** G3 DRAFT — chờ NCS duyệt. H3 = NO CONCLUSION. Verdict tính mới: **GAP_NARROW** (không phải GAP_CONFIRMED).
+- **STATUS:** G3 **APPROVED** (NCS, 04/11/2026); Q19–Q22 đã trả lời (mục 8). H3 = NO CONCLUSION. Verdict tính mới: **GAP_NARROW** (không phải GAP_CONFIRMED).
 - **SOURCE ANCHORS:** `sources/outline_v14_3_RQ3_RQ4_verbatim.txt` L64 (danh sách đối chứng); `sources/outline_v14_3_references.txt` [1] [3] [4] [30] [31]; `sources/REVIEW_SKELETON.md` KT3; `sources/RQ2_DECISION_LOG.md` §10 (novelty audit RQ2: NARROW_REQUIRED); NCS Q15–Q18 (04/11/2026); `sources/THESIS_AUDIT_LOG_RQ3_RQ4.md` (chưa lưu vào `sources/` — xem ghi chú dưới); `RQ3_REFS.bib` (chỉ nguồn đã mở, mỗi mục có `x-opened`, `x-depth`).
 - **ASSUMPTIONS:** (1) "VERIFIED" = tôi đã mở trang/PDF và đọc phần được nêu; "MENTIONED_ONLY" = chỉ có tên/bản ghi/ảnh chụp kết quả tìm kiếm; "MISSING" = không tìm thấy hoặc không mở được. (2) Tìm kiếm tính mới giới hạn: ≈ 8 truy vấn chế độ standard + các bài đã tải; không phải rà soát hệ thống. Vắng kết quả không chứng minh khoảng trống. (3) Cập nhật quyết định: Q15–Q18 áp dụng (Q15 theo ô, Wilcoxon, Holm; Q16 thành viên V_t theo ngày đến; Q17 g(x) ngây thơ + chỉ số nạp HB2; Q18 nhãn giả cho hàng chờ nhãn, vùng trôi dạt = kNN-đặc-trưng > P95 của D_cal, ngân sách chọn ≤ 1 GPU-giờ TabFM / ≤ 1 CPU-giờ LightGBM mỗi ngày mô phỏng).
 - **OPEN QUESTIONS:** Q19–Q22 (mục 7).
@@ -145,3 +145,16 @@ Nhãn nguồn: V = VERIFIED, M = MENTIONED_ONLY, X = MISSING. "Phần đã mở"
 | Q20 | Quy tắc thích nghi STRAL và [30] sang "b nhãn cố định mỗi ngày": dùng mẫu §5 (2)–(4) hay quy tắc khác? |
 | Q21 | Bản NetGuard cần trích là v1/v2/v3? (kết quả tìm kiếm nêu v3; tôi chưa xác nhận bản mình đọc.) |
 | Q22 | Có chấp nhận lời lẽ tính mới "chưa thấy trong phạm vi đã tìm" (GAP_NARROW) cho KT3, hay NCS muốn mở rộng tìm kiếm (chế độ extended / thêm cơ sở dữ liệu) trước G5? |
+
+---
+
+## 8. Quyết định của NCS cho G3 (04/11/2026) và phiên bản đã đọc
+
+| # | Quyết định |
+|---|---|
+| Q19 | Đối chứng mật độ chỉ dùng khâu chọn GMM của NetGuard. Tên gọi: **"NetGuard-style density selection (no generation)"**, ghi rõ là bản rút gọn, không phải NetGuard đầy đủ |
+| Q20 | Quy tắc chung cho STRAL và [30] (áp dụng ở **thực nghiệm chính**, không dùng trong probe P3): ngân sách tích lũy — phần b′ chưa tiêu chuyển sang ngày sau, mỗi ngày tiêu tối đa 3b′, tổng nhãn cả lượt chạy bằng các nhánh khác; ηb dành riêng vẫn lấy đủ mỗi ngày; báo cáo số nhãn tiêu từng ngày. STRAL: ADWIN (δ = 0,002, chờ 2.000 sự kiện) quyết định ngày được tiêu; chọn lai (gần ngưỡng + điểm cao). [30]: `RandVarUncertainty`, tỷ lệ ngân sách = b′/|U_t|, duyệt theo thứ tự đến, dừng khi đủ b′. Không dùng phương án "chỉ tiêu vào ngày kích hoạt" vì STRAL sẽ dùng ít nhãn hơn |
+| Q21 | Trích đúng phiên bản đã đọc (số phiên bản và ngày in ở lề trang 1 của PDF arXiv) |
+| Q22 | Chấp nhận "chưa thấy trong phạm vi đã tìm" (GAP_NARROW). Tìm kiếm chế độ extended làm sau, trước khi viết bất kỳ tuyên bố đóng góp nào; không cần trước G5 |
+
+**Phiên bản tôi đã đọc (lề trang 1 của PDF):** NetGuard (Gupta et al.) **arXiv:2503.03022v3, 14 Aug 2025**; STRAL **arXiv:2605.22324v2, 18 Oct 2026**; Tab-AICL **arXiv:2603.27385v1, 28 Mar 2026**; Castellani et al. **arXiv:2204.06822v2, 12 Sep 2022**; Cacciarelli & Kulahci **arXiv:2302.08893v4, 29 Nov 2023**. Danh mục tham khảo của đề cương: [1] ghi "arXiv:2503.03022, 2025" (không nêu phiên bản) — không mâu thuẫn, nhưng phiên bản đã đọc là v3 và cần ghi trong bài; [4] ghi "arXiv:2605.22324, 2026" — khớp v2 (tác giả nêu v2 là bản đổi tên từ PACT v1, kết quả hai bản không so sánh trực tiếp). Câu hỏi Q21 cũ ("v1/v2/v3?") đóng.
