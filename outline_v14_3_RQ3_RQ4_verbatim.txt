@@ -1,0 +1,82 @@
+# Outline v14.3 excerpt for RQ3/RQ4 audits (verbatim, pandoc plain text; TeX kept where pandoc could not render)
+RQ2: Ở cùng kích thước ngữ cảnh k, chính sách có nhận biết lớp và họ tấn công có duy trì khả năng phát hiện họ tấn công hiếm và tái xuất hiện tốt hơn các chính sách hiện có (cửa sổ trượt, CURE, bộ đệm cân bằng lớp trong học liên tục) không?
+
+H2: Trên các tình huống có họ tấn công hiếm hoặc tái xuất hiện (định nghĩa ở Nội dung 1), chính sách ba ngăn đạt recall theo họ và AUPRC cao hơn CURE và bộ đệm cân bằng lớp ít nhất ε₂, trên TabFM (kết quả trên TabPFN-2.5 được báo cáo như kiểm tra độ vững), kể cả khi 10% nhãn bị nhiễu ngẫu nhiên.
+
+Mục tiêu 3 – Chọn mẫu gán nhãn dưới ngân sách và độ trễ nhãn
+
+RQ3: Khi mỗi ngày chỉ được gán b nhãn và nhãn đến sau độ trễ τ, chọn mẫu nào để gửi chuyên viên sẽ tối đa hóa chất lượng phát hiện?
+
+H3: Với b ∈ {100, 300, 1.000} nhãn/ngày và τ ∈{0; 1 ngày; 7 ngày}, chọn mẫu theo giảm lỗi kỳ vọng tính trên ngữ cảnh đạt F1-macro cao hơn chọn theo độ bất định ít nhất ε₃ và có chỉ số phơi nhiễm thấp hơn; phép so được thực hiện cả khi có và không có bộ lọc chống đầu độc.
+
+Mục tiêu 4 – Lọc ngữ cảnh chống đầu độc nhãn
+
+RQ4: Khi một phần nguồn gán nhãn bị chiếm và lật nhãn có chủ đích, làm thế nào ngăn nhãn độc đi vào ngữ cảnh mà không loại nhầm dữ liệu trôi dạt thật và nguồn trung thực có phân phối khác?
+
+H4a (đối thủ không thích nghi): Với số nguồn bị chiếm không vượt m_max < K/2 (K là số nguồn nhãn), bộ lọc hai tầng giảm tỷ lệ thành công của tấn công lật nhãn có chủ đích (kiểu ii–iii, Định nghĩa 5; kiểu i chỉ xuất hiện trên đường cong điểm gãy) ít nhất 50% (tương đối) so với không phòng thủ và tốt hơn RONI; F1 trên dữ liệu sạch giảm không quá ε₄.
+
+H4b (đối thủ thích nghi): Với đối thủ biết cơ chế phòng thủ (kiểu iv–v; kiểu vi chỉ xuất hiện trên đường cong điểm gãy), bộ lọc hai tầng vẫn giảm tỷ lệ thành công tấn công so với không phòng thủ và so với RONI. H4a và H4b được kiểm định và báo cáo riêng, để kết quả của H4a vẫn đứng được nếu H4b không đạt.
+
+Ba câu hỏi RQ2–RQ4 không độc lập: chúng cùng tác động lên một tập dữ liệu có nhãn duy nhất theo thứ tự lọc → chọn → nạp. Vì vậy RQ2 và RQ3 được đánh giá cả khi có nhiễu nhãn, và RQ3, RQ4 được đánh giá khi ba cơ chế chạy chung (Nội dung 5). RQ1 được trả lời trên kết quả của cả ba, vì mọi chính sách đều chạy trên TFM và LightGBM.
+C_(t) = π(C_(t − 1), N_(t), U_(t)),  |C_(t)| ≤ k(B) (2-2)
+
+trong đó N_(t) là các dòng vừa có nhãn đã qua bộ lọc và U_(t) là luồng chưa nhãn. Với LightGBM, C_(t) đóng vai trò bộ đệm huấn luyện có cùng kích thước k.
+
+Định nghĩa 3 – Dịch chuyển phân phối. Luận án phân biệt dịch chuyển đặc trưng (P_(t)(X) đổi), dịch chuyển tỷ lệ lớp (P_(t)(Y) đổi, P(X | Y) giữ nguyên), trôi dạt khái niệm (P_(t)(Y | X) đổi) và sự xuất hiện hoặc tái xuất hiện của một họ tấn công. BBSE [47] chỉ đúng dưới giả định dịch chuyển tỷ lệ lớp, nên chỉ được dùng như một tín hiệu kích hoạt, kèm kiểm định hai mẫu bằng bộ phân loại cho P(X).
+
+Định nghĩa 4 – Ngân sách nhãn và độ trễ nhãn. Mỗi chu kỳ t, tối đa b dòng được gửi cho chuyên viên; nhãn của dòng gửi lúc s chỉ có từ thời điểm s + τ, với τ ∈ {0; 1 ngày; 7 ngày}. Chất lượng được đo cả bằng chỉ số phơi nhiễm: tổng thời gian các luồng tấn công không bị phát hiện kể từ khi họ tấn công đó xuất hiện [2].
+
+Định nghĩa 5 – Mô hình đe dọa đầu độc nhãn theo nguồn. Nhãn đến từ K nguồn mô phỏng, tối đa m_(max) < K/2 nguồn bị chiếm (điểm gãy của kiểm toán ngang hàng). Dòng được chia cho các nguồn theo hai chế độ: (a) ngẫu nhiên, hoán đổi được; (b) theo mạng con, để nguồn trung thực có phân phối khác nhau – dùng để đo tỷ lệ gắn cờ oan. Nguồn bị chiếm có thể (i) lật nhãn ngẫu nhiên; (ii) lật nhãn tấn công thành bình thường cho một họ mục tiêu; (iii) lật các dòng có ảnh hưởng lớn nhất; (iv) đối thủ thích nghi: biết cơ chế lọc và chỉ lật số dòng vừa dưới ngưỡng phát hiện của tầng nguồn, rải đều qua các ngày; (v) né tầng dòng: chỉ lật các dòng có điểm ảnh hưởng ước lượng thấp; (vi) các nguồn bị chiếm phối hợp với nhau để làm lệch phép so sánh ngang hàng, khiến nguồn trung thực trông bất thường. Đối thủ không sửa đặc trưng và không truy cập trọng số mô hình.
+
+Định nghĩa 6 – Ngân sách cảnh báo nhầm. Gọi A_(FP) là số cảnh báo nhầm tối đa SOC chấp nhận mỗi ngày và N̂_(t) là số luồng bình thường dự kiến trong ngày t. Ngưỡng cảnh báo λ_(t) được chọn sao cho tỷ lệ báo động nhầm ước lượng không vượt:
+
+$\alpha_{t} = \frac{A_{FP}}{{\widehat{N}}_{t}}$ (2-3)
+
+Ngưỡng được hiệu chỉnh trên một tập hiệu chỉnh D_(cal) rời khỏi ngữ cảnh và tập kiểm V_(t), lấy từ phần nhãn dành riêng mô tả dưới đây, để tránh lạc quan do rò rỉ. Với các ngày mà lưu lượng bình thường quá ít để ước lượng α_(t) ổn định, luận án báo cáo trực tiếp số cảnh báo nhầm và recall tại ngưỡng cố định.
+
+Ngân sách nhãn cho V_(t) và D_(cal). Tập kiểm V_(t) (dùng cho g(x) ở Nội dung 3 và I_(i) ở Nội dung 4) và tập hiệu chỉnh D_(cal) đều cần nhãn chuyên viên, nên được trừ vào cùng ngân sách b. Mỗi ngày, η·b nhãn (η = 0,2) được dành riêng cho hai tập này; (1 − η)·b nhãn còn lại dùng cho chiến lược chọn mẫu đang đánh giá. Phần dành riêng được lấy ngẫu nhiên phân tầng theo điểm dự đoán của mô hình, lấy dư ở các tầng điểm cao để có đủ dòng tấn công, và mỗi dòng mang trọng số nghịch đảo xác suất được chọn để ước lượng trên V_(t) và D_(cal) không bị lệch.
+
+Nội dung và phương pháp nghiên cứu
+
+Nội dung 1 – Giao thức đánh giá, chèn trôi dạt có kiểm soát và công suất thống kê
+
+Giao thức phát lại dữ liệu theo thời gian thực của bộ dữ liệu với các tham số b, τ, K, m_(max) và A_(FP). Bộ đo tài nguyên đã có của NCS (mục 3.1) được dùng để xác định k(B) cho TabFM (và cho TabPFN-2.5 trong kiểm tra độ vững). Để giới hạn chi phí suy luận, chỉ số đánh giá mỗi ngày được tính trên một mẫu cố định, phân tầng theo lớp và họ tấn công, giữ toàn bộ luồng của các họ hiếm; cùng một mẫu được dùng cho mọi phương pháp và seed.
+
+Giao thức chọn siêu tham số (điều kiện công bằng của H1). LightGBM được chọn siêu tham số một lần trên dữ liệu phát triển (khoảng 50 cấu hình, tìm kiếm Bayes, tiêu chí AUPRC) rồi khóa cho mọi thực nghiệm; TFM dùng checkpoint mặc định, không tinh chỉnh. Mỗi chính sách quản lý dữ liệu, cả đề xuất lẫn đối chứng, được cấp cùng ngân sách chọn tham số, tối đa 12 cấu hình, trên cùng dữ liệu phát triển. Chi phí chọn tham số của từng mô hình được cộng vào chi phí dùng cho H1b.
+
+Chèn trôi dạt có kiểm soát. Vì trôi dạt trên các bộ phát triển chủ yếu do lịch tấn công, luận án tạo thêm các tình huống trôi dạt có kiểm soát từ chính dữ liệu: (a) dịch chuyển đặc trưng bằng lấy mẫu lại có trọng số theo một số đặc trưng; (b) dịch chuyển tỷ lệ lớp bằng lấy mẫu lại theo lớp; (c) họ tấn công tái xuất hiện bằng cách rút một họ khỏi luồng trong d ngày rồi đưa trở lại. Các tình huống chèn cho phép quy kết nhân quả theo từng loại trôi dạt, nhưng không độc lập với nhau: các tình huống sinh từ cùng một ngày gốc dùng chung luồng gốc. Vì vậy chúng không làm tăng số đơn vị suy luận độc lập; cỡ mẫu hiệu dụng gần với số ngày gốc chứ không phải số tình huống.
+
+Định nghĩa "hiếm" và "tái xuất hiện": một họ tấn công là hiếm trong ngày đích nếu chiếm dưới 1% số luồng tấn công của ngày đó; là tái xuất hiện nếu đã vắng mặt ít nhất d = 3 ngày trước đó.
+
+Mô hình thống kê và công suất. Kiểm định chính dùng mô hình hiệu ứng hỗn hợp, với ngày gốc là hiệu ứng ngẫu nhiên, tình huống lồng trong ngày gốc, và bộ dữ liệu là hiệu ứng cố định (chỉ có 2 bộ phát triển nên không ước lượng được như hiệu ứng ngẫu nhiên). Khoảng tin cậy dùng bootstrap phân cấp: lấy mẫu lại ngày gốc, rồi lấy mẫu lại tình huống trong mỗi ngày gốc. Công suất của từng phép so chính được ước lượng bằng mô phỏng theo đúng cấu trúc phân cấp này trên dữ liệu phát triển, trước khi đăng ký. Nếu công suất dưới 0,8 tại biên ε đã chọn, luận án bổ sung ngày gốc (thêm bộ dữ liệu hoặc mở rộng giai đoạn thời gian) chứ không chỉ tăng số tình huống, và không nới biên.
+
+Biên hiệu ứng và lý do. Biên dự kiến: ε₁ = ε₂ = 0,03 AUPRC; ε₃ = 0,02 F1-macro; ε₄ = 0,01 F1 trên dữ liệu sạch. Mỗi biên được chọn theo hai tiêu chí và giá trị chốt là giá trị lớn hơn: (i) ý nghĩa vận hành – mức chênh được quy đổi ra số cảnh báo nhầm và số luồng tấn công bỏ sót mỗi ngày trên NF-ToN-IoT-v3 tại recall vận hành; (ii) vượt nhiễu – không nhỏ hơn 2 lần độ lệch chuẩn giữa các seed, ước lượng trên dữ liệu phát triển. Cả hai giá trị quy đổi được tính và khóa khi đăng ký trước.
+Nội dung 3 – Chọn mẫu gán nhãn theo giảm lỗi kỳ vọng (RQ3)
+
+Điểm chọn mẫu là giảm lỗi kỳ vọng [31] tính trên ngữ cảnh:
+
+g(x) = E_(y ∼ p̂(⋅∣x))[ℒ_(V)(C)−ℒ_(V)(C∪{(x,y)})] (2-6)
+
+trong đó tập kiểm V_(t) gồm các dòng có nhãn chuyên viên, từ nguồn không bị gắn cờ, thuộc phần nhãn dành riêng η·b (mục 2.1), rời khỏi C_(t) và Dcal, trong cửa sổ W_(V) ngày gần nhất; độ cũ của V_(t) được báo cáo.
+
+Nhãn giả chỉ là một biến thể ablation: hạn mức ≤ 10% ngữ cảnh, không vào ngăn k_H và tập V, bị thay khi nhãn thật đến, và không áp dụng cho dòng dự đoán là bình thường thuộc vùng trôi dạt (để tránh nạp họ tấn công mới với nhãn bình thường). Rủi ro tự khẳng định sai được đo trực tiếp.
+
+Đối chứng: chọn ngẫu nhiên; chọn theo độ bất định (kiểu INSOMNIA [3]); chọn theo mật độ (NetGuard [1]); kích hoạt khi phát hiện thay đổi (STRAL [4]); chiến lược bất định có ngẫu nhiên hóa cho luồng trôi dạt [30]; và giảm lỗi kỳ vọng cho LightGBM ở cùng ngân sách để kiểm chứng H1a. Với LightGBM, g(x) được tính chính xác (huấn luyện lại với từng nhãn giả định) nếu tổng chi phí nằm trong ngân sách; nếu vượt, dùng xấp xỉ bằng refit của LightGBM (giữ cấu trúc cây, chỉ ước lượng lại giá trị lá), và báo cáo sai lệch của xấp xỉ so với cách tính chính xác trên một mẫu con.
+
+Nội dung 4 – Bộ lọc ngữ cảnh chống đầu độc (RQ4)
+
+Tầng nguồn: kiểm toán từng nguồn nhãn bằng so sánh ngang hàng trong cùng ngày (thủ tục DoP của NCS, mục 3.1). Thủ tục này không cần tập tham chiếu sạch, nhưng cần nguồn trung thực chiếm đa số (m_(max) < K/2) và chế độ chia dòng hoán đổi được; khi chế độ chia theo mạng con làm nguồn khác phân phối, nguồn được xếp trạng thái "chưa xác định" thay vì bị gắn cờ. Ngoài ra, chính sách nạp giới hạn mỗi nguồn chiếm không quá s dòng trong ngữ cảnh – điều kiện của Mệnh đề 2.
+
+Tầng dòng: với mỗi dòng mới, điểm ảnh hưởng là thay đổi mất mát trên V_(t) khi bỏ dòng đó khỏi ngữ cảnh (cùng họ với RONI [33]):
+
+I_(i) = ℒ_(V)(C) − ℒ_(V)(C∖{(x_(i),y_(i))}) (2-7)
+
+chỉ tính cho dòng mới nạp, theo lô. Dòng từ nguồn bị gắn cờ hoặc có Ii vượt ngưỡng bị giữ lại chờ xác minh. Đối chứng: không phòng thủ; RONI [33]; confident learning [32]; làm sạch nhãn bằng kNN. Định giá dữ liệu xấp xỉ là đối chứng tùy chọn, chỉ chạy nếu còn ngân sách tính toán. Chỉ số: tỷ lệ thành công tấn công (recall trên họ mục tiêu), F1 trên dữ liệu sạch, tỷ lệ dòng sạch bị chặn và tỷ lệ nguồn trung thực bị gắn cờ oan ở chế độ chia theo mạng con. Lưới chính dùng bốn kiểu tấn công (ii)–(v); kiểu (i) và (vi) chỉ chạy trên đường cong điểm gãy. Ngoài các mức m_(max) chính, luận án vẽ đường cong suy giảm khi số nguồn bị chiếm m tăng từ 0 đến K − 1, để thể hiện điểm gãy tại K/2 của từng tầng lọc.
+
+Phân tích lý thuyết – Mệnh đề 2 (chặn trên ảnh hưởng của nguồn bị chiếm). Giả sử chính sách nạp giới hạn mỗi nguồn chiếm không quá s dòng trong ngữ cảnh, và kiểm toán nguồn phát hiện được nguồn có tỷ lệ lật nhãn vượt f với xác suất ít nhất 1 − β. Khi đó, với xác suất ít nhất (1 − β)^(m_(max)), một đối thủ thích nghi muốn không bị phát hiện chỉ đưa được tối đa m_max·f·s dòng độc vào ngữ cảnh, tức tỷ lệ dòng độc
+
+$\rho \leq \frac{m_{\max}\, f^{*}s}{k}$ (2-8)
+
+Với s = k/K, ρ ≤ (m_(max)/K)·f < f^(*)/2. Chặn này đúng cho mọi mô hình vì chỉ phụ thuộc chính sách nạp. Với một bộ dự đoán thay thế kiểu láng giềng gần (như truy hồi ngữ cảnh của LoCalPFN), dự đoán tại x không đổi nếu m_(max)·f^(*)·s nhỏ hơn một nửa chênh lệch số phiếu giữa lớp đa số và lớp thứ hai trong lân cận của x, theo hướng chứng nhận độ bền kNN trước đầu độc dữ liệu [49]. TFM không có bảo đảm tương tự; luận án kiểm chứng bằng thực nghiệm mức suy giảm của TFM theo ρ và so với bộ dự đoán thay thế. Chặn trên số dòng độc m_(max)·f^(*)·s vẫn đúng khi các nguồn bị chiếm phối hợp, vì giới hạn s áp cho từng nguồn; nhưng khi phối hợp (kiểu vi), f^(*) và β của kiểm toán ngang hàng có thể xấu đi vì phân phối tham chiếu bị lệch. Mục tiêu chứng minh của Chuyên đề 2 là liên hệ f^(*) và β với công suất của kiểm toán ngang hàng theo số dòng mỗi nguồn mỗi ngày, trong cả trường hợp độc lập và phối hợp.
+
+Nội dung 5 – Đánh giá kết hợp
