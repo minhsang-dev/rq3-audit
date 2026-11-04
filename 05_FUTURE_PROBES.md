@@ -1,6 +1,6 @@
 # 05 — FUTURE PROBES (G4) — chỉ thiết kế, KHÔNG chạy
 
-- **STATUS:** G4 DRAFT — chờ NCS duyệt. Không chạy CPU/GPU, không tạo runner. Mọi kết quả sau này vẫn là **DEV (DEV_REUSE)**: không có root DEV chưa dùng (`RQ2_DECISION_LOG` §3). H3 = NO CONCLUSION.
+- **STATUS:** G4 **APPROVED** (NCS, 04/11/2026). Thứ tự chạy đã duyệt: P3b → kiểm thử (a)–(e) → P3a (ô τ = 0 trước) → P3c. Không chạy CPU/GPU, không tạo runner. Mọi kết quả sau này vẫn là **DEV (DEV_REUSE)**: không có root DEV chưa dùng (`RQ2_DECISION_LOG` §3). H3 = NO CONCLUSION.
 - **SOURCE ANCHORS:** `sources/outline_v14_3_RQ3_RQ4_verbatim.txt` (H3 L10; ε₃ L53; (2-6) L58; V_t L60; đối chứng L64); `sources/outline_v14_3_noidung5.txt`; `sources/bai1_manuscript_v4_2_clean.md` §3.1, §3.2, §3.6, §4.1–4.3 (Bảng 2), §4.5; `sources/RQ2_DECISION_LOG.md` §2–3, §5 (bài học 2, 6, 7), §8–9 (HB2, LOCK_HB2); `sources/THESIS_AUDIT_LOG_RQ3_RQ4.md` §4 (Q1–Q18); `02_DEFINITIONS_AND_TIMELINE.md`; `03_ASSUMPTIONS_AND_COST.md` (A1–A6, bảng chi phí); `04_BASELINE_AND_NOVELTY.md`.
 - **ASSUMPTIONS:** (1) Thời gian LightGBM 0,1 s/lần refit ở k = 2.000 và 0,0074 s/1.000 hàng dự đoán là số Bài 1 (phần cứng **[CXM]**); ước lượng CPU dưới đây là ngoại suy từ đó và sẽ được P3b thay bằng số đo. (2) Chuỗi "tái xuất hiện" như RQ2/Bài 1: 2 + d + 2 ngày, d = 3 (đề cương L49) → 7 ngày, ≈ 6–7 ngày đánh giá; ước lượng dùng 7 ngày chọn. (3) Khởi tạo ngữ cảnh/D_cal cho τ > 0 là PROPOSAL chờ Q23 (Bài 1 chỉ chạy τ = 0). (4) Mọi ngưỡng GO/HOLD/NO-GO bên dưới là **PROPOSAL, chốt trước khi chạy** (băm tệp, ghi `version_log.jsonl`), không phải kết quả.
 - **OPEN QUESTIONS:** Q23–Q26 (mục 7). Q23 chặn P3a/P3c.
@@ -121,3 +121,13 @@ Tổng ngân sách thực nghiệm chính thức **chốt sau P3b, trước ti�
 | Q24 | "Cùng chi phí" = mọi nhánh tuân **cùng trần ≤ 1 CPU-giờ/ngày** (cách tôi hiểu), hay phải **dùng gần bằng nhau** (khi đó R/U cần một dạng tiêu thêm tính toán, ví dụ ensemble nhiều seed)? | Cách hiểu thứ nhất; báo cáo tỉ lệ chi phí |
 | Q25 | ℒ_V chính thức = log-loss có trọng số 1/π (đề xuất của tôi) hay 0-1? (Đề cương chưa nêu; Settles nêu cả hai.) Quy tắc N_c = 10·b′ và nhánh phân tách U_c có chấp nhận không? | log-loss; N_c = 10·b′; có U_c |
 | Q26 | Root "đủ thông tin" cho P3 (F1-macro nhánh ngẫu nhiên < 0,95) và gộp quyết định theo root có chấp nhận không? Có muốn dùng cả root chạm trần làm kiểm tra phụ? | Như đề xuất ở §0 |
+
+---
+
+## 8. Quyết định của NCS cho G4 (04/11/2026)
+- Q15 (sửa): trong probe DEV dùng p chưa hiệu chỉnh làm tiêu chí; p-Holm chỉ mô tả. Với nghiên cứu chính xem `06_DECISION_MEMO.md` §4.
+- Q23: được dùng lịch sử có nhãn trước luồng để khởi tạo ngữ cảnh/D_cal (giống nhau mọi nhánh, ngoài các ngày đánh giá); giai đoạn làm nóng nhãn τ + 2 ngày không tính vào đánh giá; ô τ = 0 của P3a chạy trước.
+- Q24: mọi nhánh tuân cùng trần; không ép tiêu gần bằng nhau; báo cáo chi phí thực từng nhánh.
+- Q25: ℒ_V = log-loss có trọng số 1/π (0-1 làm độ nhạy); N_c = 10·b′; có nhánh U_c.
+- Q26: root "đủ thông tin" chỉ tính từ nhánh ngẫu nhiên, chốt trước khi xem kết quả EER, báo cáo các root bị loại.
+- Phát hiện 3 (TabFM mất tính chọn lọc dưới trần 1 GPU-giờ): chưa quyết; đo GPU thật chung lượt với P4d (RQ4). Hai phương án: nâng trần (báo cáo chi phí) hoặc EER hai tầng có danh sách rút gọn (U_c tách tác dụng của bước rút gọn).
