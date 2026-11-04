@@ -1,7 +1,7 @@
 # 01 — REQUIREMENT TRACE (G0)
 
 - **STATUS:** G0 DRAFT — chờ NCS duyệt.
-- **SOURCE ANCHORS:** `outline_v14_3_RQ3_RQ4_verbatim.txt` — dòng nêu trong từng mục (L = số dòng của tệp này trong repo).
+- **SOURCE ANCHORS:** `sources/outline_v14_3_RQ3_RQ4_verbatim.txt` — dòng nêu trong từng mục (L = số dòng của tệp này trong repo).
 - **ASSUMPTIONS:** Trích dẫn dưới đây là nguyên văn (giữ nguyên ký hiệu pandoc như `E_(y ∼ …)`, `ℒ_(V)`). Phân loại theo thang của hồ sơ: ĐỀ CƯƠNG QUY ĐỊNH / BẰNG CHỨNG ĐÃ KIỂM / SUY LUẬN / GIẢ THUYẾT / CHƯA XÁC MINH / ĐỀ XUẤT SỬA (CHƯA DUYỆT). Ở G0 chỉ dùng "ĐỀ CƯƠNG QUY ĐỊNH" (trích) và "CHƯA XÁC MINH"; chưa có "BẰNG CHỨNG ĐÃ KIỂM" nào.
 - **OPEN QUESTIONS:** các điểm đánh dấu ⚑ là chỗ có thể mơ hồ, chuyển sang G1 làm câu hỏi; **không tự quyết ở đây**.
 - **DECISION:** Không sửa RQ/H/ε. H3 = NO CONCLUSION.
@@ -88,3 +88,24 @@
 1. Hồ sơ giao việc mô tả H3 gọn đúng như đề cương; không phát hiện sai khác giữa tóm tắt trong hồ sơ và nguyên văn đề cương ở các mục trích (kiểm tay, G0).
 2. Đề cương gắn "(2-6)" cho EER và dùng cùng V_t cho I_i (2-7) của RQ4 — V_t là tài nguyên dùng chung giữa RQ3 và RQ4; ghi để G1 xét phụ thuộc vòng (V_t loại nguồn bị gắn cờ, mà gắn cờ nguồn là tầng của RQ4).
 3. Số kết quả/ước lượng nào cũng chưa có: **H3 = NO CONCLUSION**.
+
+## E. Ánh xạ số tham khảo ↔ khóa (bổ sung lần 2; nguồn gián tiếp)
+
+Nguồn: bảng KT3 trong `sources/REVIEW_SKELETON.md` (dòng 74) và ghi chú `Outline ref` trong `REVIEW_REFS.bib`. **CHƯA XÁC MINH** với danh mục gốc của đề cương (thiếu `outline_v14_3_references.txt`).
+
+| Số | Khóa | Công trình | Mức đọc theo bib/CSV | Ghi chú |
+|---|---|---|---|---|
+| [1] | gupta2025netguard | Generative active adaptation for drifting and imbalanced NID (arXiv:2503.03022) | "opened: arXiv abs page" | bib ghi `Outline ref [1]` |
+| [2] | — | — | — | **Không có khóa**; nguồn chỉ số phơi nhiễm CHƯA PHÂN GIẢI |
+| [3] | andresini2021 | INSOMNIA (AISec '21) | FIX applied (thư mục); "FIT OK (active learning / label estimation)" | Bib ghi "Bai1 ref [16]", không ghi Outline ref [3]; ánh xạ [3] chỉ từ bảng KT3 |
+| [4] | ndichu2026stral | STRAL (arXiv:2605.22324) | bib ghi `Outline ref [4]` | |
+| [30] | zliobaite2014active | Active learning with drifting streaming data (TNNLS 2014) | "Crossref record opened; content not read" | Ánh xạ [30] chỉ từ bảng KT3 |
+| [31] | roy2001eer | Roy & McCallum, EER (ICML 2001) | "abstract page only; edition [VERIFY]" | Ánh xạ [31] chỉ từ bảng KT3 |
+
+Lưu ý: không khóa nào trong bảng được đọc tới mức phương pháp theo bib/CSV, ngoại trừ ghi chú methods-read của `treerath2026tabaicl` (qua NOVELTY_AUDIT_2, không đính kèm). `cacciarelli2024` (survey) và `settles2010` (§ Expected Error Reduction, mục 3.4 theo bib) là nguồn bổ sung của nhóm RQ3 trước, cũng mới mở mức bìa/Crossref.
+
+## F. Dữ kiện từ nguồn mới liên quan trực tiếp tới RQ3 (BẰNG CHỨNG ĐÃ KIỂM = có trong tệp đính kèm; chưa kiểm độc lập)
+
+- `RQ2_DECISION_LOG.md` §2: giao thức Bài 1 replay L5 ("score first, learn after"), k = 2.000, LightGBM đã khóa, CPU-only cho DEV. §3: **không còn root DEV chưa dùng** → mọi probe G4 là DEV_REUSE (khớp hồ sơ giao việc). §8–9: HB2 = CBRS_FAMILY + H = 200 dòng benign chọn theo điểm tấn công (top-k); trạng thái GO CONTRIBUTION CANDIDATE phạm vi LightGBM, CIDDS-001; TabFM phase chưa làm.
+- Bản thảo Bài 1: giao thức dùng b, η, k, τ; thiết lập chính τ = 0 ngày (dòng 178). Hệ số thời gian TabFM xem `00_SOURCE_MANIFEST.md` mục 3.
+- `RQ2_DECISION_LOG.md` §10: novelty audit RQ2 = NARROW_REQUIRED; Tab-AICL nằm trong nhóm công trình gần nhất của RQ2 và cũng được `REVIEW_SKELETON.md` đánh dấu cần nhóm RQ3 đọc lại.

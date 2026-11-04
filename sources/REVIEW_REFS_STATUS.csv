@@ -1,0 +1,145 @@
+key,title,year,source_file,status,note
+gama2014survey,A survey on concept drift adaptation,2014,Bai1 v4_2 refs,OK,FIT: general survey; do not use it to support a claim about the share of malicious flows moving by an order of magnitude. Issue month not independently seen.
+lu2019review,Learning under concept drift: A review,2019,Bai1 v4_2 refs,OK,Matches dblp; month not verified.
+shyaa2024,Evolving cybersecurity frontiers: A comprehensive survey on concept drift and feature dynamics aware machine and deep learning in intrusion detection systems,2024,Bai1 v4_2 refs,OK,Elsevier journal (the Bai1 comment said ACM DL; harmless). Online Nov 2024.
+alahmadi2022,99\% false positives: A qualitative study of {SOC} analysts' perspectives on security alarms,2022,Bai1 v4_2 refs,FIX applied,Pages and place/month added per REF_CHECK.
+hollmann2025,Accurate predictions on small data with a tabular foundation model,2025,Bai1 v4_2 refs,OK,8 Jan 2025.
+qu2025tabicl,{TabICL}: A tabular foundation model for in-context learning on large data,2025,Bai1 v4_2 refs,OK,
+googletabfm2026,"{TabFM}: Tabular foundation models (software, v1.0.1; weights google/tabfm-1.0.0-pytorch, rev. 77cb9cc1b4fd3a9c77fbb9552c218200bb4dab83)",2026,Bai1 v4_2 refs,OK,Descriptive title (repo has none). Weights licence tabfm-non-commercial-v1.0: state in availability section.
+gangwani2025,Light-weight benchmarks reveal the hidden hardware cost of zero-shot tabular foundation models,2025,Bai1 v4_2 refs,OK,"FIT: benchmark covers TabPFN-1.0 and TabICL-base on a T4, not TabFM."
+nguyen2026own,Reassessing tabular foundation models for network intrusion detection under temporal distribution shift: A preregistered evaluation,2026,Bai1 v4_2 refs,NOT_FOUND (own unpublished manuscript),Exclude from the review reference list unless a preprint/DOI exists at submission; never cite its results.
+bouthillier2021,Accounting for variance in machine learning benchmarks,2021,Bai1 v4_2 refs,OK,Pages not seen.
+lourenco2026dualfifo,In-context learning of evolving data streams with tabular foundational models,2026,Bai1 v4_2 refs,OK,arXiv:2502.16840. Same work as PRIOR_ART keys lourenco2026dualfifo and lourenco2026dualfifo_kdd (merged). FIT OK for memory description.
+lee2026cure,Bounded context management for tabular foundation models on stream learning,2026,Bai1 v4_2 refs,OK,REF_CHECK: use 'presented at' (no proceedings volume found). Code commit f7c6b2f from Bai1.
+chrysakis2020cbrs,Online continual learning from imbalanced data,2020,Bai1 v4_2 refs,OK,
+pendlebury2019,{TESSERACT}: Eliminating experimental bias in malware classification across space and time,2019,Bai1 v4_2 refs,FIX applied,Pages added.
+arp2022,Dos and don'ts of machine learning in computer security,2022,Bai1 v4_2 refs,FIX applied,"Pages added; 8 authors, et al. acceptable."
+andresini2021,{INSOMNIA}: Towards concept-drift robustness in network intrusion detection,2021,Bai1 v4_2 refs,FIX applied,Pages and DOI added. FIT OK (active learning / label estimation).
+botacin2025,Towards more realistic evaluations: The impact of label delays in malware detection pipelines,2025,Bai1 v4_2 refs,OK,Abstract not read in full.
+garcia2025,Foundation models for cybersecurity: A comprehensive multi-modal evaluation of {TabPFN} and {TabICL} for tabular intrusion detection,2025,Bai1 v4_2 refs,FIX applied,DOI added. FIT OK (stratified splits / 5-fold CV).
+qu2026tabiclv2,"{TabICLv2}: A better, faster, scalable, and open tabular foundation model",2026,Bai1 v4_2 refs,FIX applied,Pages now listed; arXiv:2602.11139.
+helli2024,Drift-resilient {TabPFN}: In-context learning temporal distribution shifts on tabular data,2024,Bai1 v4_2 refs,OK,Title has 'Temporal' in arXiv/paper (arXiv:2411.10634); volume 37 not seen on a proceedings page.
+zliobaite2010,Change with delayed labeling: When is it detectable?,2010,Bai1 v4_2 refs,OK,
+grzenda2020,Delayed labelling evaluation for data streams,2020,Bai1 v4_2 refs,FIX applied,Issue number confirmed.
+gama2013,On evaluating stream learning algorithms,2013,Bai1 v4_2 refs,FIX applied,Issue number confirmed.
+luay2025,Temporal analysis of NetFlow datasets for network intrusion detection systems,2025,Bai1 v4_2 refs,OK,FIT OK (creates NetFlow v3 datasets).
+uq2026nids,Machine learning-based {NIDS} datasets,2026,Bai1 v4_2 refs,OK,"Access date is the authors' own (Oct. 28, 2026)."
+sarhan2022,Towards a standard feature set for network intrusion detection system datasets,2022,Bai1 v4_2 refs,OK,"FIT: defines 12/43-feature sets (v1/v2), not v3."
+moustafa2021,A new distributed architecture for evaluating {AI}-based security systems at the edge: Network {TON\_IoT} datasets,2021,Bai1 v4_2 refs,OK,
+cic2018,{CSE-CIC-IDS2018} on {AWS},n.d.,Bai1 v4_2 refs,OK,No author list on page; attack schedule table seen.
+engelen2021,Troubleshooting an intrusion detection dataset: The {CICIDS2017} case study,2021,Bai1 v4_2 refs,FIX applied,CITATION-FIT: covers CIC-IDS-2017 only; do not cite for CSE-CIC-IDS2018 (use liu2022).
+liu2022,Error prevalence in {NIDS} datasets: A case study on {CIC-IDS-2017} and {CSE-CIC-IDS-2018},2022,Bai1 v4_2 refs,FIX applied,Pages and DOI added; covers both datasets.
+nosek2018,The preregistration revolution,2018,Bai1 v4_2 refs,FIX applied,DOI added.
+bertinetto2021,{NeurIPS} 2020 Workshop on Pre-registration in Machine Learning,2021,Bai1 v4_2 refs,OK,
+vanmiltenburg2021,Preregistering {NLP} research,2021,Bai1 v4_2 refs,OK,
+kieser2003,Simple procedures for blinded sample size adjustment that do not affect the type {I} error rate,2003,Bai1 v4_2 refs,OK,
+friede2006,Sample size recalculation in internal pilot study designs: A review,2006,Bai1 v4_2 refs,OK,
+wilcoxon1945,Individual comparisons by ranking methods,1945,Bai1 v4_2 refs,OK,End page 83 not independently seen.
+hodges1963,Estimates of location based on rank tests,1963,Bai1 v4_2 refs,FIX applied,Issue and month confirmed.
+dixon1946,The statistical sign test,1946,Bai1 v4_2 refs,OK,
+kunsch1989,The jackknife and the bootstrap for general stationary observations,1989,Bai1 v4_2 refs,OK,
+liu1992,Moving blocks jackknife and bootstrap capture weak dependence,1992,Bai1 v4_2 refs,OK,Single secondary source (a reference list in a Springer article).
+ke2017,{LightGBM}: A highly efficient gradient boosting decision tree,2017,Bai1 v4_2 refs,OK,Pages from one bibliographic record.
+ring2017,Flow-based benchmark data sets for intrusion detection,2017,Bai1 v4_2 refs,FIX applied,CITATION-FIT: ECCWS abstract says ~32 M flows (whole set); the technical report says ~31 M in the OpenStack environment. Add the report (ring2017report).
+ring2017report,Technical report {CIDDS-001} data set,2017,Bai1 v4_2 refs,[VERIFY],Bai1 ref [44] was added after REF_CHECK; REF_CHECK row 42 says report authorship not checked.
+kong2026tabfm,{TabFM}: A zero-shot foundation model for tabular data,2026,Bai1 v4_2 refs,OK,State which variant (TabFM / TabFM+ / TabFM-Auto) a study uses [VERIFY]. Same as PRIOR_ART key kong2026tabfm.
+zliobaite2014active,Active learning with drifting streaming data,2014,newly opened (this task),OK (opened),Crossref record opened: https://api.crossref.org/works/10.1109/TNNLS.2012.2236570 ; content not read.
+cacciarelli2024,Active learning for data streams: a survey,2024,newly opened (this task),OK (opened),Crossref record opened: https://api.crossref.org/works/10.1007/s10994-023-06454-2 ; content not read.
+settles2010,Active learning literature survey,2010,newly opened (this task),OK (opened),
+roy2001eer,Toward optimal active learning through sampling estimation of error reduction,2001,newly opened (this task),OK (opened); edition [VERIFY],Abstract page only.
+mohammadian2023,Evaluating Label Flipping Attack in Deep Learning-Based NIDS,2023,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract page only
+apruzzese2022,Modeling Realistic Adversarial Attacks against Network Intrusion Detection Systems,2021,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different); venue [VERIFY],read_depth: passages on poisoning read; whole paper not read
+ariffin2026,Adaptive Intrusion Detection System using Transformer-Based Neural Networks and Continual Learning Approach with Adversarial Investigation,2026,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),"read_depth: abstract, related work 2.5, limitations read; result tables not read in full"
+sameera2025,WeiDetect: Weibull Distribution-Based Defense against Poisoning Attacks in Federated Learning for Network Intrusion Detection Systems,2025,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),read_depth: method section 4.2-4.3 and threat model read; results not read in full
+korycki2020,Adversarial Concept Drift Detection under Poisoning Attacks for Robust Data Stream Mining,2020,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),"read_depth: abstract, taxonomy and threat sections read; experiments not read in full"
+zhao2024,Universal Vulnerabilities in Large Language Models: Backdoor Attacks for In-context Learning,2024,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: ACL page and arXiv abstract page only
+ren2025,ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks,2025,RQ4_REFS.bib,OK (opened; RQ4 audit: different),read_depth: method sections 4-5.2 and experiment setup read; results tables skimmed
+jhuma2025,From Theory to Practice: Evaluating Data Poisoning Attacks and Defenses in In-Context Learning on Social Media Health Discourse,2025,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),read_depth: methods and defence section read; results skimmed
+djilani2025,On the Robustness of Tabular Foundation Models: Test-Time Attacks and In-Context Defenses,2025,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: passages on scope read; rest not read
+hu2026,Noise Immunity in In-Context Tabular Learning: An Empirical Robustness Analysis of TabPFN's Attention Mechanisms,2026,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract + setup read; noise results not read in detail
+bilos2026,A Mechanistic Study of Tabular Foundation Models,2026,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),read_depth: section 6 / Table 3 read; appendix H not fully read
+priorpoison2026,"PriorPoison: poisoning, backdoor and defense experiments on TabPFN in-context learning (GitHub repository)",n.d.,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),read_depth: README page read; code not read
+jia2022knn,Certified Robustness of Nearest Neighbors against Data Poisoning and Backdoor Attacks,2022,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),read_depth: Sections 3.1-3.2 and Theorem 1-2 read
+levine2021dpa,Deep Partition Aggregation: Provable Defenses against General Poisoning Attacks,2021,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract only (methods NOT read)
+rosenfeld2020,Certified Robustness to Label-Flipping Attacks via Randomized Smoothing,2020,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract only (methods NOT read)
+nelson2008,Exploiting Machine Learning to Subvert Your Spam Filter,2008,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),read_depth: RONI section 5.1 read in full
+northcutt2021,Confident Learning: Estimating Uncertainty in Dataset Labels,2021,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),read_depth: Sections 2-3 (algorithm) read
+paudice2018,Label Sanitization against Label Flipping Poisoning Attacks,2018,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),read_depth: Algorithm 2 and experiments read
+koh2022,Stronger Data Poisoning Attacks Break Data Sanitization Defenses,2022,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),read_depth: abstract + defence/attack formulation read; experiments not read in full
+steinhardt2017,Certified Defenses for Data Poisoning Attacks,2017,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract only (methods NOT read)
+ghorbani2019,Data Shapley: Equitable Valuation of Data for Machine Learning,2019,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract only
+jia2019knnshap,Efficient Task-Specific Data Valuation for Nearest Neighbor Algorithms,2019,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract only
+pruthi2020,Estimating Training Data Influence by Tracing Gradient Descent,2020,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract only
+han2018,Co-teaching: Robust Training of Deep Neural Networks with Extremely Noisy Labels,2018,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract/intro only
+dawid1979,Maximum Likelihood Estimation of Observer Error-Rates Using the EM Algorithm,1979,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),read_depth: EconPapers abstract page only (full text NOT read)
+miao2018,Attack under Disguise: An Intelligent Data Poisoning Attack Mechanism in Crowdsourcing,2018,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),"read_depth: intro, problem setting, knowledge assumptions grepped; derivations not read"
+fang2021,Data Poisoning Attacks and Defenses to Crowdsourcing Systems,2021,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),"read_depth: Section 6 (MWA, MIE) read; experiments not read in full"
+ma2020,Adversarial Crowdsourcing Through Robust Rank-One Matrix Completion,2020,RQ4_REFS.bib,OK (opened; RQ4 audit: partly),"read_depth: Algorithm 1, Theorems 1-2, crowdsourcing section read"
+zhang2025peer,Evaluating LLM-Contaminated Crowdsourcing Data Without Ground Truth,2025,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),read_depth: abstract page only (methods NOT read)
+cao2022fltrust,FLTrust: Byzantine-robust Federated Learning via Trust Bootstrapping,2021,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),read_depth: abstract and intro read; methods NOT read in full
+yin2018,Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates,2018,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract and intro only
+blanchard2017,Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent,2017,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract page only
+rahman2026antiflipper,AntiFLipper: A Secure and Efficient Defense Against Label-Flipping Attacks in Federated Learning,2025,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),read_depth: abstract/intro only
+severi2021,Explanation-Guided Backdoor Poisoning Attacks Against Malware Classifiers,2021,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different),"read_depth: intro, threat model, defence section read; results table not read in detail"
+dolejs2026,Gray-Box Poisoning of Continuous Malware Ingestion Pipelines,2026,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),"read_depth: abstract, threat model, defence setup read; tables not read in detail"
+lan2025,Trust Under Siege: Label Spoofing Attacks against Machine Learning for Android Malware Detection,2025,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly),"read_depth: threat model, countermeasure and defence-result passages read; rest not read"
+aryal2022,Analysis of Label-Flip Poisoning Attack on Machine Learning Based Malware Detector,2023,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: different); venue [VERIFY],read_depth: header and introduction grepped; results not read
+taheri2020,On Defending Against Label Flipping Attacks on Malware Detection Systems,2020,RQ4_REFS.bib,provisional rating (abstract/partial read; RQ4 audit: partly); venue [VERIFY],"read_depth: abstract, introduction and related work read; method/results not read"
+cleanlab,"cleanlab: data-centric AI package (GitHub/PyPI, Apache-2.0; v2.9.0 released 13 Jan 2026 per PyPI)",2026,RQ4_REFS.bib,OK (repo/package page opened; RQ4 specs),
+art,"Adversarial Robustness Toolbox (GitHub, MIT; PyPI 1.20.1 released 7 Jul 2025)",2025,RQ4_REFS.bib,OK (repo/package page opened; RQ4 specs),
+mmsr,MMSR: code for Adversarial Crowdsourcing Through Robust Rank-One Matrix Completion (GitHub),n.d.,RQ4_REFS.bib,OK (repo/package page opened; RQ4 specs),
+sung1998bootstrap,[STUB] Sung & Poggio 1998,1998,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+felzenszwalb2010,[STUB] Felzenszwalb và cs. 2010,2010,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read T); full bib entry missing [TO OPEN]",Evidence strength: methods read
+shrivastava2016ohem,[STUB] Shrivastava và cs. 2016 (OHEM),2016,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read T); full bib entry missing [TO OPEN]",Evidence strength: methods read
+schroff2015facenet,[STUB] Schroff và cs. 2015 (FaceNet),2015,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read T); full bib entry missing [TO OPEN]",Evidence strength: methods read
+xuan2020hard,[STUB] Xuan và cs. 2020,2020,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+robinson2021hard,[STUB] Robinson và cs. 2021,2021,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+hendrycks2019oe,[STUB] Hendrycks và cs. 2019 (Outlier Exposure),2019,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+ruff2020deepsad,[STUB] Ruff và cs. 2020 (Deep SAD),2020,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+wilkie2025clan,[STUB] Wilkie và cs. 2025 (CLAN),2025,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+wang2026boundad,[STUB] Wang và cs. 2026 (BoundAD),2026,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+aljundi2019mir,[STUB] Aljundi và cs. 2019 (MIR),2019,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+aljundi2019gss,[STUB] Aljundi và cs. 2019 (GSS),2019,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+bang2021rainbow,[STUB] Bang và cs. 2021 (Rainbow Memory),2021,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+prabhu2020gdumb,[STUB] Prabhu và cs. 2020 (GDumb),2020,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+kim2020prs,[STUB] Kim và cs. 2020 (PRS),2020,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+shim2021aser,[STUB] Shim và cs. 2021 (ASER),2021,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+rebuffi2017icarl,[STUB] Rebuffi và cs. 2017 (iCaRL),2017,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+chaudhry2019tiny,[STUB] Chaudhry và cs. 2019,2019,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+isele2018ser,[STUB] Isele & Cosgun 2018,2018,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+yoon2022ocs,[STUB] Yoon và cs. 2022 (OCS),2022,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+borsos2020coreset,[STUB] Borsos và cs. 2020,2020,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+tiwari2022gcr,[STUB] Tiwari và cs. 2022 (GCR),2022,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+serra2025uncertainty,[STUB] Serra và cs. 2025,2025,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+pereira2025uncertainty,[STUB] Pereira và cs. 2025,2025,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+smith2024adaptive,[STUB] Smith và cs. 2024,2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+shaulariel2024teal,[STUB] Shaul-Ariel & Weinshall 2024 (TEAL),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+li2023adaer,"[STUB] Li và cs. 2023 (AdaER, E-BRS)",2023,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+mai2022survey,[STUB] Mai và cs. 2022,2022,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+amalapuram2023ecbrs,"[STUB] Amalapuram và cs. 2023 (ECBRS, PAPA)",2023,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read T); full bib entry missing [TO OPEN]",Evidence strength: methods read
+amalapuram2024spider,[STUB] Amalapuram và cs. 2024 (SPIDER),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+amalapuram2024soul,[STUB] Amalapuram và cs. 2024 (SOUL),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+zhang2025ssf,[STUB] Zhang và cs. 2025 (SSF),2025,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'giống một phần', read T); full bib entry missing [TO OPEN]",Evidence strength: methods read
+ying2025metanoia,[STUB] Ying và cs. 2025 (METANOIA),2025,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+faber2022active,[STUB] Faber và cs. 2022,2022,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+xu2026coreset,[STUB] Xu và cs. 2026,2026,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+faber2023lifelong,[STUB] Faber và cs. 2023 (khảo sát),2023,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+thomas2024localpfn,[STUB] Thomas và cs. 2024 (LoCalPFN),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+ma2024tabdpt,[STUB] Ma và cs. 2024 (TabDPT),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+feuer2024tunetables,[STUB] Feuer và cs. 2024 (TuneTables),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+xu2024mixturepfn,[STUB] Xu và cs. 2024 (MixturePFN),2024,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+heredge2026crumb,[STUB] Heredge và cs. 2026 (CRUMB),2026,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+sergazinov2025chunked,[STUB] Sergazinov & Yin 2025 (Chunked TabPFN),2025,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read S); full bib entry missing [TO OPEN]",Evidence strength: search snippet only (weakest)
+abdullah2026ctxsamp,[STUB] Abdullah 2026,2026,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read T); full bib entry missing [TO OPEN]",Evidence strength: methods read
+ipas2026lucos,[STUB] Ipas và cs. 2026 (LUCoS),2026,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+liu2021kate,[STUB] Liu và cs. 2021 (KATE),2021,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+rubin2022epr,[STUB] Rubin và cs. 2022 (EPR),2022,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+zhang2022active,[STUB] Zhang và cs. 2022,2022,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+scarlatos2023reticl,[STUB] Scarlatos & Lan 2023 (RetICL),2023,PRIOR_ART_1.md (REFS.bib NOT attached),"STUB: audited in PRIOR_ART_1 (rating 'khác', read A); full bib entry missing [TO OPEN]",Evidence strength: abstract only
+xie2025ugsr,"[STUB] UGSR (Xie et al.), malware, per-class codebook",2025,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
+mei2022hcil,"[STUB] HCIL (Mei et al.), hard cases beside herding exemplars",2022,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
+rahman2025madar,"[STUB] MADAR (Rahman et al.), Isolation-Forest-ranked samples per malware family",2025,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
+treerath2026tabaicl,"[STUB] Tab-AICL (Treerath et al.), TabPFN margin-ranked context under a label budget",2026,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
+harun2025grasp,"[STUB] GRASP (Harun et al.), easy-to-hard rehearsal",2025,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
+zhang2025sclifd,"[STUB] MES (Zhang et al.), per-class periphery exemplars",2025,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
+yang2025baep,"[STUB] BAEP (Yang et al.), periphery exemplars",2025,NOVELTY_AUDIT_2.md (no bib attached),"STUB: methods read per NOVELTY_AUDIT_2, but no bib entry/URL attached [TO OPEN] [VERIFY]",
