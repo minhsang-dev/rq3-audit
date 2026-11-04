@@ -1,0 +1,112 @@
+%% RQ3_REFS.bib -- ONLY works that were actually opened in this audit (G0-G3, 2026-11-04).
+%% x-opened gives URL and read depth. Works NOT opened (zliobaite2014active, pham2022fs, botacin2025 full text, lightgbm docs) are deliberately absent;
+%% see 04_BASELINE_AND_NOVELTY.md section 6 for their MENTIONED_ONLY / [VERIFY] status.
+
+@techreport{settles2010,
+  author = {Settles, Burr},
+  title = {Active learning literature survey},
+  institution = {Computer Sciences Technical Report 1648, University of Wisconsin--Madison},
+  year = {2010},
+  url = {https://burrsettles.com/pub/settles.activelearning.pdf},
+  x-opened = {https://burrsettles.com/pub/settles.activelearning.pdf},
+  x-depth = {text: Sec. 3.4 (expected error reduction) read in full; Sec. 2.2 located, not read}
+}
+
+@inproceedings{roy2001eer,
+  author = {Roy, Nicholas and McCallum, Andrew},
+  title = {Toward optimal active learning through sampling estimation of error reduction},
+  booktitle = {Proc. ICML},
+  pages = {441--448},
+  year = {2001},
+  url = {https://mlanthology.org/icml/2001/roy2001icml-optimal/},
+  x-opened = {https://mlanthology.org/icml/2001/roy2001icml-optimal/},
+  x-depth = {abstract only; loss function not stated on page; the formula comes from Settles 2010 Sec. 3.4; edition number [VERIFY]}
+}
+
+@inproceedings{andresini2021,
+  author = {Andresini, Giuseppina and Pendlebury, Feargus and Pierazzi, Fabio and Loglisci, Corrado and Appice, Annalisa and Cavallaro, Lorenzo},
+  title = {{INSOMNIA}: Towards concept-drift robustness in network intrusion detection},
+  booktitle = {Proc. 14th ACM Workshop Artif. Intell. Secur. (AISec '21)},
+  pages = {111--122},
+  year = {2021},
+  doi = {10.1145/3474369.3486864},
+  x-opened = {https://s2lab.cs.ucl.ac.uk/downloads/insomnia.pdf},
+  x-depth = {full text (method Sec. 3, experiments, availability Sec. 7 read; related work skimmed)}
+}
+
+@misc{gupta2025netguard,
+  author = {Gupta, Ragini and Liu, Shinan and Zhang, Ruixiao and Hu, Xinyue and Wang, Xiaoyang and Benkraouda, Hadjer and Kommaraju, Pranav and Cao, Phuong and Feamster, Nick and Nahrstedt, Klara},
+  title = {Generative active adaptation for drifting and imbalanced network intrusion detection},
+  howpublished = {arXiv:2503.03022v3, 14 Aug 2025},
+  year = {2025},
+  url = {https://arxiv.org/abs/2503.03022},
+  x-opened = {https://arxiv.org/abs/2503.03022 ; https://arxiv.org/pdf/2503.03022},
+  x-depth = {abstract page + PDF text: prior-selection overview (GMM, I-score, budget P) and experiment budget lines read; appendix and full experiments not read}
+}
+
+@misc{ndichu2026stral,
+  author = {Ndichu, Samuel and Ban, Tao and Ozawa, Seiichi and Takahashi, Takeshi},
+  title = {{STRAL}: What adaptation gains, loses, and costs in {SOC} alert screening},
+  howpublished = {arXiv:2605.22324v2 (18 Oct 2026; revised from PACT v1)},
+  year = {2026},
+  url = {https://arxiv.org/abs/2605.22324},
+  x-opened = {https://arxiv.org/pdf/2605.22324},
+  x-depth = {PDF text: abstract, method overview (trigger, cooldown, acquisition), Sec. 5.3, data availability read; tables skimmed}
+}
+
+@misc{treerath2026tabaicl,
+  author = {Treerath, Wilailuck and Pittorino, Fabrizio},
+  title = {Active In-Context Learning for Tabular Foundation Models},
+  howpublished = {arXiv:2603.27385v1, 28 Mar 2026},
+  year = {2026},
+  url = {https://arxiv.org/abs/2603.27385},
+  x-opened = {https://arxiv.org/abs/2603.27385 ; https://arxiv.org/pdf/2603.27385},
+  x-depth = {abstract, introduction, method (acquisition rules, proxy shortlist), part of experiments/limitations; result tables not read in detail; no code link found in the text}
+}
+
+@misc{cacciarelli2024,
+  author = {Cacciarelli, Davide and Kulahci, Murat},
+  title = {Active learning for data streams: a survey},
+  howpublished = {arXiv:2302.08893v4, 29 Nov 2023 (journal version: Mach. Learn. 113(1), 2024 -- not opened)},
+  year = {2024},
+  url = {https://arxiv.org/abs/2302.08893},
+  x-opened = {https://arxiv.org/pdf/2302.08893},
+  x-depth = {text search + passages: taxonomy (uncertainty / expected error), label delay paragraph, verification-latency references; not read in full}
+}
+
+@misc{castellani2022,
+  author = {Castellani, Andrea and Schmitt, Sebastian and Hammer, Barbara},
+  title = {Stream-based Active Learning with Verification Latency in Non-stationary Environments},
+  howpublished = {arXiv:2204.06822v2, 12 Sep 2022},
+  year = {2022},
+  url = {https://arxiv.org/abs/2204.06822},
+  x-opened = {https://arxiv.org/pdf/2204.06822},
+  x-depth = {abstract + introduction/related work + problem set-up; method and experiments not read in detail; venue [VERIFY]}
+}
+
+@misc{sharchilev2018,
+  author = {Sharchilev, Boris and Ustinovsky, Yury and Serdyukov, Pavel and de Rijke, Maarten},
+  title = {Finding Influential Training Samples for Gradient Boosted Decision Trees},
+  howpublished = {arXiv:1802.06640},
+  year = {2018},
+  url = {https://arxiv.org/abs/1802.06640},
+  x-opened = {https://arxiv.org/abs/1802.06640},
+  x-depth = {abstract page only: leave-one-out retraining for GBDT with fixed tree structures; the term LeafRefit does not appear on the page (seen only in a search snippet) -> [VERIFY]}
+}
+
+@misc{moa_aluncertainty,
+  title = {{MOA} 2020.12.0 API: moa.classifiers.active.ALUncertainty},
+  howpublished = {Software documentation},
+  year = {2020},
+  url = {https://javadoc.io/static/nz.ac.waikato.cms.moa/moa/2020.12.0/moa/classifiers/active/ALUncertainty.html},
+  x-opened = {https://javadoc.io/static/nz.ac.waikato.cms.moa/moa/2020.12.0/moa/classifiers/active/ALUncertainty.html},
+  x-depth = {class description and option list read; source code and licence not opened -> licence [VERIFY]}
+}
+
+@misc{modal_eer,
+  title = {{modAL}: expected\_error\_reduction (API reference)},
+  howpublished = {Software documentation},
+  url = {https://modal-python.readthedocs.io/en/latest/content/apireference/expected_error.html},
+  x-opened = {https://modal-python.readthedocs.io/en/latest/content/apireference/expected_error.html},
+  x-depth = {function signature and parameter descriptions only; no retraining details, repository and licence not opened -> [VERIFY]}
+}

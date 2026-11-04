@@ -1,0 +1,51 @@
+TÀI LIỆU THAM KHẢO
+[1] R. Gupta et al., “Generative active adaptation for drifting and imbalanced network intrusion detection,” arXiv:2503.03022, 2025.
+[2] M. Botacin and H. Gomes, “Towards more realistic evaluations: The impact of label delays in malware detection pipelines,” Comput. Secur., vol. 148, Art. no. 104122, 2025.
+[3] G. Andresini, F. Pendlebury, F. Pierazzi, C. Loglisci, A. Appice, and L. Cavallaro, “INSOMNIA: Towards concept-drift robustness in network intrusion detection,” in Proc. 14th ACM Workshop Artif. Intell. Secur. (AISec ’21), 2021.
+[4] S. Ndichu, T. Ban, S. Ozawa, and T. Takahashi, “STRAL: What adaptation gains, loses, and costs in SOC alert screening,” arXiv:2605.22324, 2026.
+[5] L. Liu, G. Engelen, T. Lynar, D. Essam, and W. Joosen, “Error prevalence in NIDS datasets: A case study on CIC-IDS-2017 and CSE-CIC-IDS-2018,” in Proc. IEEE Conf. Commun. Netw. Secur. (CNS), 2022, doi: 10.1109/CNS56114.2022.9947235.
+[6] G. Engelen, V. Rimmer, and W. Joosen, “Troubleshooting an intrusion detection dataset: The CICIDS2017 case study,” in Proc. IEEE Secur. Privacy Workshops (SPW), 2021, pp. 7–12, doi: 10.1109/SPW53761.2021.00009.
+[7] B. A. Alahmadi, L. Axon, and I. Martinovic, “99% false positives: A qualitative study of SOC analysts’ perspectives on security alarms,” in Proc. 31st USENIX Secur. Symp., 2022.
+[8] N. Hollmann et al., “Accurate predictions on small data with a tabular foundation model,” Nature, vol. 637, pp. 319–326, 2025.
+[9] J. Qu, D. Holzmüller, G. Varoquaux, and M. Le Morvan, “TabICL: A tabular foundation model for in-context learning on large data,” in Proc. 42nd Int. Conf. Mach. Learn. (ICML), PMLR, vol. 267, 2025.
+[10] Google Research, “Introducing TabFM: A zero-shot foundation model for tabular data,” Google Research Blog, Jun. 30, 2026. [Online]. Available: https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/. Model card and license: https://huggingface.co/google/tabfm-1.0.0-pytorch
+[11] G. Ke et al., “LightGBM: A highly efficient gradient boosting decision tree,” in Proc. Adv. Neural Inf. Process. Syst. (NeurIPS), vol. 30, 2017, pp. 3146–3154.
+[12] I. Gangwani and A. Bansal, “Light-weight benchmarks reveal the hidden hardware cost of zero-shot tabular foundation models,” arXiv:2512.00888, 2025.
+[13] A. Lourenço, J. Gama, E. P. Xing, and G. Marreiros, “In-context learning of evolving data streams with tabular foundational models,” arXiv:2502.16840, 2025, doi: 10.1145/3770854.3780305.
+[14] J. Lee, D. Choi, M. Choi, and J. Yoo, “Bounded context management for tabular foundation models on stream learning,” presented at the 2nd ICML Workshop Found. Models Struct. Data, 2026, arXiv:2606.18677.
+[15] S. O. Kurashkin, V. S. Tynchenko, A. S. Borodulin, V. A. Nelyub, N. O. Kalutsky, and T. Connie, “The current generation of tabular foundation models: A critical review,” Mach. Learn. Knowl. Extr., vol. 8, no. 8, Art. no. 244, 2026.
+[16] Prior Labs, “TabPFN-2.5: Advancing the state of the art in tabular foundation models,” arXiv:2511.08667, 2025.
+[17] M. Luay, S. Layeghy, S. Hosseininoorbin, M. Sarhan, N. Moustafa, and M. Portmann, “Temporal analysis of NetFlow datasets for network intrusion detection systems,” arXiv:2503.04404, 2025.
+[18] G. Maciá-Fernández, J. Camacho, R. Magán-Carrión, P. García-Teodoro, and R. Therón, “UGR’16: A new dataset for the evaluation of cyclostationarity-based network IDSs,” Comput. Secur., vol. 73, pp. 411–424, 2018.
+[19] P. Goldschmidt and D. Chudá, “Network intrusion datasets: A survey, limitations, and recommendations,” arXiv:2502.06688, 2025.
+[20] M. Cantone, C. Marrocco, and A. Bria, “On the cross-dataset generalization of machine learning for network intrusion detection,” arXiv:2402.10974, 2024.
+[21] P. García, J. de Curtò, I. de Zarzà, J. C. Cano, and C. T. Calafate, “Foundation models for cybersecurity: A comprehensive multi-modal evaluation of TabPFN and TabICL for tabular intrusion detection,” Electronics, vol. 14, no. 19, Art. no. 3792, 2025.
+[22] A. Al-Dahmani, A. Bin Safwan, M. Obeidat, and B. Alsinglawi, “Optimizing IoT intrusion detection with tabular foundation models for smart city forensics,” arXiv:2604.11394, 2026.
+[23] K. Helli, D. Schnurr, N. Hollmann, S. Müller, and F. Hutter, “Drift-resilient TabPFN: In-context learning temporal distribution shifts on tabular data,” in Proc. Adv. Neural Inf. Process. Syst. (NeurIPS), vol. 37, 2024.
+[24] V. Thomas et al., “Retrieval & fine-tuning for in-context tabular models,” in Proc. Adv. Neural Inf. Process. Syst. (NeurIPS), vol. 37, 2024.
+[25] S.-A. Rebuffi, A. Kolesnikov, G. Sperl, and C. H. Lampert, “iCaRL: Incremental classifier and representation learning,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), 2017.
+[26] A. Chrysakis and M.-F. Moens, “Online continual learning from imbalanced data,” in Proc. 37th Int. Conf. Mach. Learn. (ICML), PMLR, vol. 119, 2020.
+[27] T. F. Gonzalez, “Clustering to minimize the maximum intercluster distance,” Theor. Comput. Sci., vol. 38, pp. 293–306, 1985.
+[28] F. Pendlebury, F. Pierazzi, R. Jordaney, J. Kinder, and L. Cavallaro, “TESSERACT: Eliminating experimental bias in malware classification across space and time,” in Proc. 28th USENIX Secur. Symp., 2019.
+[29] F. Barbero, F. Pendlebury, F. Pierazzi, and L. Cavallaro, “Transcending TRANSCEND: Revisiting malware classification in the presence of concept drift,” in Proc. IEEE Symp. Secur. Privacy (S&P), 2022.
+[30] I. Žliobaitė, A. Bifet, B. Pfahringer, and G. Holmes, “Active learning with drifting streaming data,” IEEE Trans. Neural Netw. Learn. Syst., vol. 25, no. 1, pp. 27–39, 2014.
+[31] N. Roy and A. McCallum, “Toward optimal active learning through sampling estimation of error reduction,” in Proc. 18th Int. Conf. Mach. Learn. (ICML), 2001, pp. 441–448.
+[32] C. G. Northcutt, L. Jiang, and I. L. Chuang, “Confident learning: Estimating uncertainty in dataset labels,” J. Artif. Intell. Res., vol. 70, pp. 1373–1411, 2021.
+[33] B. Nelson et al., “Exploiting machine learning to subvert your spam filter,” in Proc. 1st USENIX Workshop Large-Scale Exploits Emergent Threats (LEET ’08), 2008.
+[34] M. V. Vejling, S. R. Pandey, C. A. N. Biscio, and P. Popovski, “Conformal data contamination tests for in-distribution data acquisition,” arXiv:2507.13835, 2025.
+[35] Q. Xu, J. Xiong, X. Cao, and Y. Yao, “False discovery rate control and statistical quality assessment of annotators in crowdsourced ranking,” in Proc. 33rd Int. Conf. Mach. Learn. (ICML), PMLR, vol. 48, 2016, pp. 1282–1291.
+[36] M. Djilani et al., “On the robustness of tabular foundation models: Test-time attacks and in-context defenses,” arXiv:2506.02978, 2025.
+[37] J. Hu and M. Ghelichi, “Noise immunity in in-context tabular learning: An empirical robustness analysis of TabPFN’s attention mechanisms,” arXiv:2604.04868, 2026.
+[38] D. Arp et al., “Dos and don’ts of machine learning in computer security,” in Proc. 31st USENIX Secur. Symp., 2022.
+[39] P. A. D. Nguyen et al., “CD-AHAL: A concept drift-aware hybrid active learning framework for network intrusion detection,” J. Comput. Sci. Cybern., vol. 42, no. 3, pp. 219–234, 2026, doi: 10.15625/1813-9663/24229.
+[40] H. H. Thai, N. D. Hieu, N. Van Tho, H. D. Hoang, P. T. Duy and V. -H. Pham, “Adversarial autoencoder and generative adversarial networks for semi-supervised learning intrusion detection system,” in Proc. Int. Conf. Comput. Commun. Technol. (RIVF), 2022, doi: https://doi.org/10.1109/RIVF55975.2022.1001392.
+[41] H. Q. Nguyen, N. D. H. Son, H. D. Do, P. T. Duy, and V.-H. Pham, “SeFed-IDS: A collaborative intrusion detection system utilizing semi-supervised federated learning and data augmentation,” in Proc. 13th Int. Symp. Inf. Commun. Technol. (SoICT), 2024, pp. 404–415, doi: 10.1007/978-981-96-4285-4_33.
+[42] Nguyễn Mạnh Tuấn, Đặng Lê Đình Trang, and Cao Văn Lợi, “aDisRAE: Adaptive discriminative representation autoencoder for few-shot cyberattack detection,” Tạp chí Khoa học và Kỹ thuật – Chuyên san Công nghệ Thông tin và Truyền thông, Trường ĐH Kỹ thuật Lê Quý Đôn, vol. 14, no. 02, 2025.
+[43] D.-M. Vu, T. H. La, G. B. Nguyen, E.-N. Huh, and H. H. Tran, “Enhancing network attack detection across infrastructures: An automatic labeling method and deep learning model with an attention mechanism,” IET Commun., vol. 18, no. 17, pp. 1107–1125, 2024.
+[44] V. K. Tran et al., “Deep transfer learning: A novel collaborative learning model for cyberattack detection systems in IoT networks,” IEEE Internet Things J., 2022, doi: 10.1109/JIOT.2022.3202029.
+[45] T. D. Luong, V. M. Tien, P. T. Duy, and V.-H. Pham, “FedLS: An anti-poisoning attack mechanism for federated network intrusion detection systems using autoencoder-based latent space representations,” in Proc. 18th Int. Conf. Inf. Secur. Pract. Exp. (ISPEC), 2023, pp. 17–35, doi: 10.1007/978-981-99-7032-2_2.
+[46] X. T. Ha, L. T. Tran, and K. L. Vo, “Intrusion detection using federated learning in non-IID data environments,” J. Sci. Technol. Inf. Secur., vol. 3, no. 23, pp. 53–61, 2024.
+[47] Z. C. Lipton, Y.-X. Wang, and A. J. Smola, “Detecting and correcting for label shift with black box predictors,” in Proc. 35th Int. Conf. Mach. Learn. (ICML), PMLR, vol. 80, 2018, pp. 3122–3130.
+[48] H. M. Gomes et al., “Adaptive random forests for evolving data stream classification,” Mach. Learn., vol. 106, pp. 1469–1495, 2017.
+[49] J. Jia, Y. Liu, X. Cao, and N. Z. Gong, “Certified robustness of nearest neighbors against data poisoning and backdoor attacks,” in Proc. AAAI Conf. Artif. Intell., vol. 36, no. 9, 2022, pp. 9575–9583.
+[50] M. Ring, S. Wunderlich, D. Grüdl, D. Landes, and A. Hotho, “Flow-based benchmark data sets for intrusion detection,” in Proc. 16th Eur. Conf. Cyber Warfare Secur. (ECCWS), 2017, pp. 361–369.
