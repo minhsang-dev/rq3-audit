@@ -96,7 +96,7 @@ Nguồn: bảng KT3 trong `sources/REVIEW_SKELETON.md` (dòng 74) và ghi chú `
 | Số | Khóa | Công trình | Mức đọc theo bib/CSV | Ghi chú |
 |---|---|---|---|---|
 | [1] | gupta2025netguard | Generative active adaptation for drifting and imbalanced NID (arXiv:2503.03022) | "opened: arXiv abs page" | bib ghi `Outline ref [1]` |
-| [2] | — | — | — | **Không có khóa**; nguồn chỉ số phơi nhiễm CHƯA PHÂN GIẢI |
+| [2] | botacin2025 | Botacin & Gomes, Towards more realistic evaluations: label delays in malware detection pipelines, Comput. Secur. 148, 104122 (2025) | bib: "Abstract not read in full"; phiên này: chỉ bản ghi Crossref | **Đã phân giải bằng `outline_v14_3_references.txt` [2]**; nội dung chưa đọc |
 | [3] | andresini2021 | INSOMNIA (AISec '21) | FIX applied (thư mục); "FIT OK (active learning / label estimation)" | Bib ghi "Bai1 ref [16]", không ghi Outline ref [3]; ánh xạ [3] chỉ từ bảng KT3 |
 | [4] | ndichu2026stral | STRAL (arXiv:2605.22324) | bib ghi `Outline ref [4]` | |
 | [30] | zliobaite2014active | Active learning with drifting streaming data (TNNLS 2014) | "Crossref record opened; content not read" | Ánh xạ [30] chỉ từ bảng KT3 |
@@ -109,3 +109,5 @@ Lưu ý: không khóa nào trong bảng được đọc tới mức phương ph�
 - `RQ2_DECISION_LOG.md` §2: giao thức Bài 1 replay L5 ("score first, learn after"), k = 2.000, LightGBM đã khóa, CPU-only cho DEV. §3: **không còn root DEV chưa dùng** → mọi probe G4 là DEV_REUSE (khớp hồ sơ giao việc). §8–9: HB2 = CBRS_FAMILY + H = 200 dòng benign chọn theo điểm tấn công (top-k); trạng thái GO CONTRIBUTION CANDIDATE phạm vi LightGBM, CIDDS-001; TabFM phase chưa làm.
 - Bản thảo Bài 1: giao thức dùng b, η, k, τ; thiết lập chính τ = 0 ngày (dòng 178). Hệ số thời gian TabFM xem `00_SOURCE_MANIFEST.md` mục 3.
 - `RQ2_DECISION_LOG.md` §10: novelty audit RQ2 = NARROW_REQUIRED; Tab-AICL nằm trong nhóm công trình gần nhất của RQ2 và cũng được `REVIEW_SKELETON.md` đánh dấu cần nhóm RQ3 đọc lại.
+
+**Cập nhật v3:** đối chiếu với `sources/outline_v14_3_references.txt` (dòng 2–5, 31–32): [1] Gupta et al. arXiv:2503.03022; [2] Botacin & Gomes 2025; [3] INSOMNIA (Andresini et al. 2021); [4] STRAL arXiv:2605.22324; [30] Žliobaitė, Bifet, Pfahringer, Holmes, TNNLS 25(1) 2014; [31] Roy & McCallum, ICML 2001. **Ánh xạ số↔công trình VERIFIED** theo danh mục gốc của đề cương (không còn "gián tiếp"). Mức đọc nội dung các công trình vẫn như bảng trên.

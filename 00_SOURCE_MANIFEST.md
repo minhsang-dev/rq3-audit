@@ -1,6 +1,6 @@
 # 00 — SOURCE MANIFEST (G0)
 
-- **STATUS:** G0 DRAFT v2 — chờ NCS duyệt. Chưa làm G1–G5.
+- **STATUS:** G0 **APPROVED** (NCS, 04/11/2026) — v3. G1 đã xuất; G2–G5 chưa làm.
 - **SOURCE ANCHORS:** `sources/outline_v14_3_RQ3_RQ4_verbatim.txt` (dòng 1–82); `sources/RQ3_CLOUD_PAPER_AUDIT_TASK_v1.md` (dòng 1–80); các tệp khác trong `sources/`.
 - **ASSUMPTIONS:** (1) Hai tệp trong repo là bản sao nguyên trạng của hai tệp NCS tải lên (sha256 khớp, xem dưới). (2) "Đã đọc" chỉ nghĩa là nội dung tệp đã được mở trong phiên này; tài liệu chỉ được nhắc tên thì không tính.
 - **OPEN QUESTIONS:** xem mục 3 (danh sách thiếu) và mục 4.
@@ -19,7 +19,7 @@ Các tệp nguồn nay nằm trong `sources/`. "Mức đọc" nói rõ phần đ
 | 5 | `REVIEW_REFS_STATUS.csv` (145 dòng) | ĐỌC TOÀN BỘ | Trạng thái xác minh từng khóa | 32872959aa26 |
 | 6 | `REVIEW_REFS.bib` (1803 dòng, 167 mục) | ĐỌC MỘT PHẦN | Đã mở các mục RQ3: zliobaite2014active, cacciarelli2024, settles2010, roy2001eer, treerath2026tabaicl, gupta2025netguard, ndichu2026stral, andresini2021, ghi chú Outline-ref. Chưa duyệt hết 167 mục | 337d5fe6c13b |
 | 7 | `bai1_manuscript_v4_2_clean.md` (707 dòng, đính kèm lần 3, chưa được yêu cầu trong hồ sơ) | ĐỌC MỘT PHẦN | Mới tìm có chủ đích: số đo thời gian TabFM (dòng ~205–212), Bảng 11 (dòng 481), vị trí tham số b/η/k/τ. Chưa đọc toàn văn; sẽ đọc phần giao thức khi vào G1 | e25f39ee8cd3 |
-| 8 | `outline_v14_3_references.txt` | **KHÔNG CÓ** | SOURCE MISSING | — |
+| 8 | `sources/outline_v14_3_references.txt` (50 mục, đính kèm lần 4) | ĐỌC TOÀN BỘ | Nay phân giải được [1]–[50]. **[2] = Botacin & Gomes 2025** (`botacin2025`) | 6a2613fdc135 |
 | 9 | Báo cáo nhóm RQ3 khác (ActiveLab × FS-FI) | KHÔNG CÓ | Tùy chọn; không đối chiếu, không trộn | — |
 | 10 | `README.md` repo | ĐỌC | Chỉ tiêu đề | — |
 
@@ -55,3 +55,24 @@ Có (nguyên văn): RQ2/H2 (dòng 2–4); RQ3, H3 (8–10); RQ4, H4a, H4b (14–
 2. Ở G3 tôi có được dùng web để mở bài báo (EER/Roy-McCallum đã có bib; Tab-AICL, INSOMNIA, NetGuard, STRAL, Zliobaite 2014) không?
 3. Bản thảo Bài 1 đính kèm lần 3 có phải để dùng làm nguồn giao thức/chi phí cho G1–G2 không? (Hồ sơ gốc không liệt kê tệp này; tôi sẽ dùng nếu bạn xác nhận.)
 4. Duyệt G0 để sang G1?
+
+
+## 5. Cập nhật v3 (sau khi NCS duyệt G0, 04/11/2026)
+
+**Trả lời của NCS:** (1) đã đính kèm `outline_v14_3_references.txt`; (2) cho phép web — phải ghi URL đã mở và mức đọc, đánh [VERIFY] chỗ không mở được, không trích bài chưa mở; (3) bản thảo Bài 1 được dùng làm nguồn cho giao thức phát lại (L5, b, η, k, EVAL/POLICY/CAL) và chi phí TabFM đã đo; mọi ngoại suy phải ghi nhãn; **không** dùng kết quả Bài 1 (H1a, PC1, bảng AUPRC) làm bằng chứng cho giả định RQ3; (4) G0 duyệt, sang G1.
+
+**Điểm lệch cần NCS biết (không tự giải quyết):** NCS nêu dùng `bai1_manuscript_v4_2.md` (SHA-256 `438d5b44…989c7`). Tệp được đính kèm là `bai1_manuscript_v4_2_clean.md`, sha256 `e25f39ee8cd3…` (hai lần đính kèm giống hệt nhau). **Hash không khớp** → tôi dùng tệp "clean" với nhãn *chưa xác nhận là cùng bản* và trích theo mục (§3.1, §3.6, §4.3, §4.5, Bảng 2), không dựa vào số dòng. Nếu NCS xác nhận "clean" là bản dẫn xuất hợp lệ thì gỡ nhãn này.
+
+### 5.1 Nhật ký web (các trang đã thử mở trong phiên)
+
+| URL | Kết quả | Mức đọc |
+|---|---|---|
+| https://arxiv.org/abs/2603.27385 (Tab-AICL, `treerath2026tabaicl`) | Mở được | **ABSTRACT** (qua WebFetch tóm lược). Có 4 luật chọn: bất định (TabPFN-Margin), đa dạng, lai, hai tầng; ngân sách ≤100 nhãn; 20 bộ phân loại benchmark. Không nhắc EER, nhãn trễ, luồng trên trang này. Phương pháp/toàn văn: chưa mở → [VERIFY] |
+| https://mlanthology.org/icml/2001/roy2001icml-optimal/ (`roy2001eer`) | Mở được | **ABSTRACT**. Hàm mất mát (log-loss/0-1) không có trên trang → [VERIFY] |
+| https://arxiv.org/abs/2503.03022 (`gupta2025netguard`) | Mở được | **ABSTRACT** (tóm lược; tiêu chí chọn mô tả "density-aware dataset prior selection"; giấy phép trang CC BY 4.0; không có link mã). Phương pháp: chưa mở → [VERIFY] |
+| https://api.crossref.org/works/10.1016/j.cose.2024.104122 (`botacin2025` = [2]) | Mở được | **CHỈ BẢN GHI SIÊU DỮ LIỆU** (tiêu đề, tác giả, Comput. Secur. vol. 148, Art. 104122). Không có tóm tắt/nội dung. **Định nghĩa chỉ số phơi nhiễm trong [2]: CHƯA ĐỌC → [VERIFY]** |
+| https://www.sciencedirect.com/science/article/pii/S0167404824004759 | 403 Forbidden (URL này do tôi suy đoán, chưa biết đúng PII) | KHÔNG MỞ ĐƯỢC |
+| https://export.arxiv.org/api/query (tìm tiêu đề [2]) | 0 kết quả | KHÔNG CÓ |
+| https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.cose.2024.104122 | 429 | KHÔNG MỞ ĐƯỢC |
+
+INSOMNIA [3], STRAL [4], Žliobaitė 2014 [30], Cacciarelli 2024, Settles 2010: **chưa thử mở** trong G1 (sẽ làm ở G3). Chưa trích gì từ chúng.
