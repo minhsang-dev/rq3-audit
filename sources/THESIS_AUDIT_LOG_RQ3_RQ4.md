@@ -10,11 +10,11 @@ Labels: PROVED (paper proof, needs independent check) / DECISION (NCS) / PROPOSA
 ## 1. Status
 | Item | State |
 |---|---|
-| RQ4 paper audit (cloud, branch `claude/bo-sung-truoc-g0-bxzb3w`) | G0, G1, G2 done (DoP-independent); G3 next |
+| RQ4 paper audit (cloud, branch `claude/bo-sung-truoc-g0-bxzb3w`) | CLOSED: G0–G4 approved 2026-11-04 (files 00–06) |
 | RQ4 experiments | HOLD until RQ3 DEV + NCS approval |
 | H4a / H4b | NO CONCLUSION |
 | Proposition 2 | ASSUMPTION GAP / COUNTEREXAMPLE (as written) |
-| RQ3 paper audit (cloud) | G0, G1 done; Q1–Q14 answered; G2 next |
+| RQ3 paper audit (cloud) | CLOSED: G0–G5 approved 2026-11-04. Prereg option (a): primary family m ≤ 3 cells, chosen after P3a on DEV roots, before any confirmation root is touched; P3a must not use the roots reserved for confirmation |
 | RQ3 DEV probes | design only; run locally after approval |
 | H3 | NO CONCLUSION |
 
@@ -43,6 +43,38 @@ Labels: PROVED (paper proof, needs independent check) / DECISION (NCS) / PROPOSA
   (already OPEN there).
 - G2-3 Reserved η·b labels: conservative — compromised sources flip them at the same rate (attacker cannot tell them
   apart).
+
+- G3 approved 2026-11-04 (file 04_BASELINE_AND_NOVELTY.md; D15–D17 in 01_REQUIREMENT_TRACE.md §G):
+  B1 = "RONI (Nelson-protocol adaptation)"; ART RONIDefense = reference only (5 differences; if used as-is, name
+  "ART-RONI"). Oracle-clean V_t = diagnostic only, never in H4a/H4b decisions. Tuning: ≤ 12 configs on DEV for EVERY
+  arm incl. S2/S3 (same budget). I_i: primary on TabFM; LightGBM with leaf-refit approximation as secondary, labelled
+  approximate. Cost flag (extrapolation from Bài 1 coefficients, not measured): exact I_i on TabFM at b = 1,000 ≈ 800
+  context re-runs/day ≈ 1+ GPU-h/day → needs an approximation (batch/group removal or scoring only rows of unflagged
+  sources) decided in G4. "Better than RONI" margin for H4a: not fixed; set after P4a, before prereg. Bib: koh2022 →
+  koh2021 (Machine Learning 2021); add mahloujifar2018multiparty, ezrielev2025patent (patent).
+- G3 novelty: GAP_NARROW kept; theory (2′) low novelty, not the anchor; candidate anchor = source→row combination for
+  tabular ICL context + defence-aware attacker + NIDS with delayed labels, conditional on P4a showing material harm.
+
+- G4 approved 2026-11-04 (05_RQ3_INTERFACE_AND_FUTURE_GATES.md, 06_DECISION_MEMO.md; D18–D23 in 01 §H). RQ4 paper
+  audit CLOSED (00–06). Q-G4-1: decide H4a per attack type (ii), (iii) separately; claim states which pass; "H4a fully
+  supported" only if both. Q-G4-2: common daily inference cap B_pass for all arms accepted in principle, value after
+  P4d; reduced-iteration B1 must be named. Q-G4-3: primary = HELD rows not verified in-run (excluded; report false-hold
+  rate), no extra labels; variant = verification consumes labels from b, never extra labels. Q-G4-4: macro-F1 at λ_t,
+  as H3. Q-G4-5: allowed variant HB2-R (removal hook + row telemetry) separate from LOCK_HB2; regression test: with no
+  removals HB2-R output bit-identical to HB2; conflict with A4 of RQ2 prop1 stays OPEN. Statistics: Wilcoxon/HL by root
+  day as primary (consistent with RQ2, RQ3 Q15 and revision item 4); mixed model only as sensitivity. P4a "material
+  harm": CI over root days of ASR_excess excludes 0 AND median ≥ 2×SD seed noise. Proofs in 03 need an independent check
+  (separate agent) before citation. Blockers: RQ3 DEV trace, DoP spec, P4d cost measurement.
+
+- RQ4 D24–D30 applied by agent (01, 05, 06). Confirmed 2026-11-04: D29 (Wilcoxon/HL primary) is a declared deviation
+  from v14.3 Nội dung 1 → kept as outline option O7 (= §5 item 4 here). Seed SD for D30 = within-root SD of ASR_excess
+  across seeds, pooled over roots by root-mean-square. Tests one-sided in the preregistered direction (as RQ3 Q15);
+  roots needed: 1/2^n < α/m for the declared family. False-hold rate of clean rows = primary reported metric (flags are
+  persistent and HELD rows are excluded). HB2-R telemetry must not consume RNG nor reorder operations.
+
+- D31–D34 recorded by RQ4 agent. P4a criterion (a) = one-sided Hodges–Lehmann lower confidence bound (level 1 − α)
+  of ASR_excess over root days > 0, consistent with D34. Root-count rule 1/2^n < α/m binds the confirmatory family
+  only; DEV probes (P3a–c, P4a–d) use uncorrected p, Holm descriptive (as RQ3 G4).
 
 ## 3. RQ4 findings (paper; DEV needed where marked)
 - PROVED: rows of compromised sources in context ≤ min(k, m·s) (quota bound; no f).
@@ -96,6 +128,27 @@ Labels: PROVED (paper proof, needs independent check) / DECISION (NCS) / PROPOSA
   kNN distance to context above the 95th percentile of D_cal distances (PROPOSAL). Budget (PROPOSAL): selection cost per
   simulated day ≤ 1 GPU-hour (TabFM) / ≤ 1 CPU-hour (LightGBM); total experiment budget fixed after P3b, before prereg.
 - G2 approved 2026-11-04 → G3 (web allowed; only opened sources count as VERIFIED).
+- G3 approved 2026-11-04 (04_BASELINE_AND_NOVELTY.md, RQ3_REFS.bib): novelty GAP_NARROW; EER-for-LightGBM is a
+  baseline, not a contribution; candidate contribution = EER on ICL context + delayed labels + HB2 + exposure, only if
+  P3a passes at matched cost. Q19 density baseline = GMM selection stage of NetGuard only, named "NetGuard-style density
+  selection (no generation)". Q20 (PROPOSAL) STRAL and [30] mapped to b/day by a shared banking rule: unspent b' carries
+  over, daily spend cap 3b', total labels over the run equal to other arms; η·b reserve fixed every day; report daily
+  spend. STRAL: ADWIN (δ = 0.002, 2,000-event grace) decides spending days, hybrid near-threshold + high-score pick.
+  [30]: RandVarUncertainty, budget fraction b'/|U_t|, arrival order, stop at b'. Q21 cite the arXiv version actually
+  read (stamp on PDF page 1). Q22 GAP_NARROW wording accepted for the audit; before writing any contribution claim:
+  extended search + NCS downloads Botacin & Gomes [2], Pham et al. 2022, Žliobaitė et al. 2014 via library access.
+- G4 (RQ3) approved 2026-11-04 (05_FUTURE_PROBES.md): P3b (~2 CPU-h) → g(x) correctness tests (a)–(e) → P3a
+  (~74 CPU-h; arms R, U, U_c, EER_c; b 100/300 × τ 0/1; 6 roots × 5 seeds) → P3c (~67 CPU-h, τ = 7, b = 300).
+  Versions read: NetGuard v3, STRAL v2, Tab-AICL v1, Castellani v2, Cacciarelli v4.
+  Findings: (1) Q15 Holm rule unattainable with 6 roots (min one-sided Wilcoxon p = 1/2^n; 1/64 > 0.05/4) — error in
+  my Q15 proposal. DEV probes: uncorrected p as criterion, Holm descriptive. Main study must pick in prereg: Holm over a
+  small predeclared primary family, or enough roots (n ≥ log2(m/0.05): 18 cells need ≥ 9 roots). (2) τ = 7 needs label
+  warm-up: Q23 allowed — labelled pre-stream history for initial context, identical for all arms; warm-up τ + 2 days
+  excluded from evaluation. (3) TabFM EER under 1 GPU-h/day is nearly non-selective at b ≥ 300 (extrapolation):
+  decide after real GPU measurement (with P4d) between raising the cap (allowed; report cost) and a two-stage shortlist
+  (U_c arm controls the shortlist effect). Q24 same cap for all arms, actual spend reported, no forced equal spend.
+  Q25 L_V = log-loss weighted 1/π (0-1 as sensitivity); N_c = 10·b′ and U_c accepted. Q26 informative root = random arm
+  F1-macro < 0.95, computed from the random arm only, fixed before EER results, excluded roots reported.
 - Bài 1 source for protocol/cost: v4.2 (438d5b44…) or its clean copy (e25f39ee…), same content minus comments.
 
 ## 5. Outline v14.3 revision list (for the window ~6 months after submission; nothing changed now)
@@ -117,3 +170,10 @@ Labels: PROVED (paper proof, needs independent check) / DECISION (NCS) / PROPOSA
     [16] authors Grinsztajn et al. (not "Prior Labs"); [19], [20] cite journal versions (Comput. Secur. 156, 104510;
     IEEE Access 12:144489–144508); [40] DOI 10.1109/rivf55975.2022.10013926; [41] year 2025; [44] IEEE IoT-J
     10(10):8578–8589, 2023; [46] vol./no. unverified; KT4 add bilos2026 (context manipulation without defence).
+13. H3 (RQ3 G5, options S1–S6, unapproved): S1 small predeclared primary family (m ≤ 3); S2 EER approximated by
+    candidate sampling, two-stage EER for TabFM; S3 formal definitions of exposure E3, F1-macro, ℒ_V, V_t; S5 at b = 100
+    report AUPRC_w and recall at fixed false alerts, or drop the cell from the primary family. ε₃ not relaxed.
+14. Root-day supply: confirmation roots must be disjoint from DEV roots; current CIDDS (7, one environment) + UNSW (2)
+    are not enough for 18 cells → add root days/datasets before the main RQ3/RQ4 study.
+15. KT3 wording: "EER chưa được khảo sát cho TFM" → "chưa thấy trong phạm vi đã tìm"; cite Tab-AICL and
+    Castellani 2022 as closest prior work.
